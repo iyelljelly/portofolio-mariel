@@ -120,51 +120,63 @@ body {
   transform: translateY(-2px);
 }
 
-/* Clickable project tile -> detail jump cue.
-   Cursor is hidden on these tiles because a custom "VIEW" cursor
-   (see #customCursor below) follows the mouse instead. */
+/* ==========================================================================
+   Custom cursors — drop your own cursor images into assets/cursors/ and
+   they'll be picked up automatically. No code edits needed.
+   - view-cursor.png  → shown while hovering a project card (front face)
+   - back-cursor.png  → shown while hovering the "Back" button on a flipped card
+   If a file is missing, the browser silently falls back to the normal
+   pointer cursor (the comma-separated fallback after the url()).
+   ========================================================================== */
 .project-tile-link {
-  cursor: none;
+  cursor: url('../assets/cursors/view-cursor.png') 24 24, pointer;
 }
 
-/* Custom floating cursor — Elaine Yu style "VIEW" bubble that
-   follows the mouse while hovering a project tile. Hidden by default,
-   positioned via JS in main.js, shown only on non-touch devices. */
-#customCursor {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 100;
-  width: 84px;
-  height: 84px;
-  border-radius: 9999px;
-  background: #1a4ee8;
-  color: #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Space Mono', monospace;
-  font-weight: 700;
-  font-size: 12px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  pointer-events: none;
-  opacity: 0;
-  transform: translate(-50%, -50%) scale(0.4);
-  transition: opacity 0.18s ease, transform 0.18s ease;
+.flip-back-btn {
+  cursor: url('../assets/cursors/back-cursor.png') 24 24, pointer;
 }
-#customCursor.is-active {
-  opacity: 1;
-  transform: translate(-50%, -50%) scale(1);
+
+/* ==========================================================================
+   Flip cards — "Explore the Work" project tiles. Clicking the front face
+   rotates the card to reveal a condensed summary on the back; clicking
+   the back face (or its "Back" button) rotates it back to the front.
+   ========================================================================== */
+.flip-card {
+  perspective: 1800px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+.flip-card.is-flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+  overflow-y: auto;
 }
 
 @media (hover: none), (pointer: coarse) {
-  /* Touch devices: never hide the real cursor / show the fake one */
-  .project-tile-link {
+  /* Touch devices: always show the normal pointer, never a custom image cursor */
+  .project-tile-link,
+  .flip-back-btn {
     cursor: pointer;
-  }
-  #customCursor {
-    display: none;
   }
 }
 
