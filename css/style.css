@@ -120,9 +120,52 @@ body {
   transform: translateY(-2px);
 }
 
-/* Clickable project tile -> detail jump cue */
+/* Clickable project tile -> detail jump cue.
+   Cursor is hidden on these tiles because a custom "VIEW" cursor
+   (see #customCursor below) follows the mouse instead. */
 .project-tile-link {
-  cursor: pointer;
+  cursor: none;
+}
+
+/* Custom floating cursor — Elaine Yu style "VIEW" bubble that
+   follows the mouse while hovering a project tile. Hidden by default,
+   positioned via JS in main.js, shown only on non-touch devices. */
+#customCursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 84px;
+  height: 84px;
+  border-radius: 9999px;
+  background: #1a4ee8;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  pointer-events: none;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.4);
+  transition: opacity 0.18s ease, transform 0.18s ease;
+}
+#customCursor.is-active {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+@media (hover: none), (pointer: coarse) {
+  /* Touch devices: never hide the real cursor / show the fake one */
+  .project-tile-link {
+    cursor: pointer;
+  }
+  #customCursor {
+    display: none;
+  }
 }
 
 ::selection {

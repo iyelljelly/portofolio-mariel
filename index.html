@@ -148,35 +148,37 @@
           about tech &amp; business.
         </h1>
 
-        <p class="text-base sm:text-lg text-slate-700 leading-relaxed font-body max-w-xl">
-          Give me a cloud architecture diagram in one hand and a business case brief in the other, and I'm genuinely happy. I like figuring out how things work, then making them work <em>better</em> — for people, not just for the spec sheet.
-        </p>
+        <!-- Bento-style dashboard: stats, CTA, and socials arranged like tiles instead of a stacked list -->
+        <div class="grid grid-cols-6 gap-3 max-w-xl pt-2">
+          <!-- Big tile: Explore the Work -->
+          <a class="col-span-4 bg-white border-2 border-cobalt rounded-xl p-4 shadow-blueprint hover:shadow-blueprint-lift transition-all flex items-center justify-between group" href="#work">
+            <div>
+              <div class="font-mono text-[10px] uppercase tracking-wide text-slate-500">Start here</div>
+              <div class="font-display font-bold text-base sm:text-lg text-slate-950 group-hover:text-cobalt transition-colors">Explore the Work</div>
+            </div>
+            <span class="material-symbols-outlined text-2xl text-cobalt group-hover:translate-x-1 transition-transform">arrow_forward</span>
+          </a>
 
-        <!-- Stats row: projects / experience / things done -->
-        <div class="grid grid-cols-3 gap-3 max-w-md">
-          <div class="stat-tile">
+          <!-- Download CV tile -->
+          <!-- TODO: point this at your real CV file, e.g. assets/cv/Mariel-Fang-CV.pdf -->
+          <a class="col-span-2 bg-cobalt text-white rounded-xl p-4 shadow-blueprint hover:shadow-blueprint-lift transition-all flex flex-col items-center justify-center gap-1" href="assets/cv/Mariel-Fang-CV.pdf" download>
+            <span class="material-symbols-outlined text-xl">download</span>
+            <span class="font-mono text-[10px] font-bold uppercase tracking-wide">Download CV</span>
+          </a>
+
+          <!-- Stat tiles -->
+          <div class="col-span-2 stat-tile">
             <div class="font-display font-extrabold text-2xl sm:text-3xl text-cobalt">4+</div>
             <div class="font-mono text-[10px] uppercase tracking-wide text-slate-500 mt-1">Projects Shipped</div>
           </div>
-          <div class="stat-tile">
+          <div class="col-span-2 stat-tile">
             <div class="font-display font-extrabold text-2xl sm:text-3xl text-cobalt">3</div>
             <div class="font-mono text-[10px] uppercase tracking-wide text-slate-500 mt-1">Years In Motion</div>
           </div>
-          <div class="stat-tile">
+          <div class="col-span-2 stat-tile">
             <div class="font-display font-extrabold text-2xl sm:text-3xl text-cobalt">6x</div>
             <div class="font-mono text-[10px] uppercase tracking-wide text-slate-500 mt-1">On Stage as MC</div>
           </div>
-        </div>
-
-        <!-- CTA: Download CV + quick jumps -->
-        <div class="flex flex-wrap gap-3 items-center pt-1">
-          <!-- TODO: point this at your real CV file, e.g. assets/cv/Mariel-Fang-CV.pdf -->
-          <a class="inline-flex items-center gap-2 px-5 py-2.5 rounded font-mono text-xs font-bold uppercase bg-cobalt text-white border-2 border-cobalt shadow-blueprint hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all" href="assets/cv/Mariel-Fang-CV.pdf" download>
-            <span class="material-symbols-outlined text-sm">download</span> Download CV
-          </a>
-          <a class="inline-flex items-center gap-2 px-5 py-2.5 rounded font-mono text-xs font-bold uppercase bg-white text-cobalt border-2 border-cobalt shadow-blueprint hover:bg-cobalt-faint transition-all" href="#work">
-            Explore the Work <span>→</span>
-          </a>
         </div>
 
         <!-- Social row -->
@@ -271,10 +273,6 @@
             <span class="material-symbols-outlined text-2xl text-cobalt">design_services</span>
             <span class="font-mono text-[11px] font-bold text-slate-800">UI/UX</span>
           </div>
-          <div class="skill-icon-tile opacity-50">
-            <span class="material-symbols-outlined text-2xl text-cobalt">add</span>
-            <span class="font-mono text-[11px] font-bold text-slate-800">Add more</span>
-          </div>
         </div>
         <!-- TODO: swap material icons for real logo images once you share assets, e.g. assets/icons/excel.png -->
       </div>
@@ -325,9 +323,6 @@
               <span class="bg-slate-100 px-2 py-0.5 rounded">#Strategy</span>
               <span class="bg-slate-100 px-2 py-0.5 rounded">#GenZResearch</span>
             </div>
-            <span class="font-mono text-xs font-bold text-cobalt inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-              View case details →
-            </span>
           </div>
         </div>
       </div>
@@ -345,10 +340,10 @@
           <div class="space-y-3">
             <div class="flex items-center justify-between flex-wrap gap-2">
               <span class="font-mono text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded bg-emerald-50 text-emerald-700 border border-emerald-300">
-                ● IOFEST 2026
+                ● I/O FESTIVAL 2026
               </span>
               <span class="font-mono text-xs font-bold text-cobalt bg-cobalt-faint px-2 py-0.5 rounded border border-cobalt/20">
-                FINALIST
+                PARTICIPANT
               </span>
             </div>
             <h3 class="font-display font-bold text-xl sm:text-2xl text-slate-950 group-hover:text-cobalt transition-colors">
@@ -358,9 +353,8 @@
               A Jakarta transit app that turns your commute into city-building. CO₂ savings become in-game currency, wrapped in Apple-inspired glassmorphism.
             </p>
           </div>
-          <div class="pt-5 mt-5 border-t border-cobalt/20 flex items-center justify-between">
+          <div class="pt-5 mt-5 border-t border-cobalt/20 flex items-center">
             <span class="bg-slate-100 px-2 py-0.5 rounded font-mono text-[11px] text-slate-500">#CivicTech</span>
-            <span class="font-mono text-xs font-bold text-cobalt inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">View →</span>
           </div>
         </div>
 
@@ -377,28 +371,26 @@
               A gamified parental-control app that fights doomscrolling without turning into a nagging app. 18+ screens, two very different users, one Figma file.
             </p>
           </div>
-          <div class="pt-5 mt-5 border-t border-cobalt/20 flex items-center justify-between">
+          <div class="pt-5 mt-5 border-t border-cobalt/20 flex items-center">
             <span class="bg-slate-100 px-2 py-0.5 rounded font-mono text-[11px] text-slate-500">#ProductDesign</span>
-            <span class="font-mono text-xs font-bold text-cobalt inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">View →</span>
           </div>
         </div>
 
-        <!-- WISE (placeholder — needs real details from Mariel) -->
-        <div class="project-tile-link bg-white rounded-xl border-2 border-dashed border-cobalt/60 p-6 shadow-blueprint hover:shadow-blueprint-lift transition-all relative group flex flex-col justify-between" onclick="goToProjectDetail('wise')">
+        <!-- Wise -->
+        <div class="project-tile-link bg-white rounded-xl border-2 border-cobalt p-6 shadow-blueprint hover:shadow-blueprint-lift transition-all relative group flex flex-col justify-between" onclick="goToProjectDetail('wise')">
           <div class="space-y-3">
             <span class="font-mono text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded bg-blue-50 text-blue-700 border border-blue-300">
-              ● UI/UX Competition
+              ● ISFEST
             </span>
             <h3 class="font-display font-bold text-xl sm:text-2xl text-slate-950 group-hover:text-cobalt transition-colors">
-              WISE
+              Wise
             </h3>
             <p class="text-slate-600 text-sm leading-relaxed">
-              [ Placeholder — tell Kiro what WISE is about and this card + its detail section below will be filled in properly. ]
+              A behavioral-finance app concept for ISFEST's "Psychology of Money" theme — because most people don't fail at budgeting from bad math, they fail from bad feelings.
             </p>
           </div>
-          <div class="pt-5 mt-5 border-t border-cobalt/20 flex items-center justify-between">
-            <span class="bg-slate-100 px-2 py-0.5 rounded font-mono text-[11px] text-slate-500">#NeedsDetails</span>
-            <span class="font-mono text-xs font-bold text-cobalt inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">View →</span>
+          <div class="pt-5 mt-5 border-t border-cobalt/20 flex items-center">
+            <span class="bg-slate-100 px-2 py-0.5 rounded font-mono text-[11px] text-slate-500">#BehavioralFinance</span>
           </div>
         </div>
       </div>
@@ -485,12 +477,12 @@
             <div class="aspect-[4/3] rounded-xl border-2 border-cobalt bg-gradient-to-br from-emerald-50 via-white to-blue-50 p-6 flex flex-col items-center justify-center text-center relative overflow-hidden group">
               <div class="absolute inset-0 bg-[radial-gradient(#1a4ee8_1px,transparent_1px)] [background-size:16px_16px] opacity-20"></div>
               <div class="absolute top-3 left-3 font-mono text-[10px] uppercase font-bold px-2 py-0.5 rounded bg-emerald-600 text-white">CIVIC TECH CONCEPT</div>
-              <div class="seal-circle w-24 h-24 text-[10px] text-emerald-700 border-2 border-emerald-600 rotate-[8deg] bg-white/90 shadow-sm mb-2">IOFEST 2026<br/>PROPOSAL<br/>FINALIST</div>
+              <div class="seal-circle w-24 h-24 text-[10px] text-emerald-700 border-2 border-emerald-600 rotate-[8deg] bg-white/90 shadow-sm mb-2">I/O FESTIVAL<br/>2026<br/>PARTICIPANT</div>
               <div class="relative z-10 font-display font-bold text-slate-800 text-lg">App Screenshot / Poster</div>
-              <p class="relative z-10 font-mono text-xs text-slate-500 max-w-[240px] mt-1">TITU — proposed by team "Naat Dulu" for IOFEST, BINUS University Jakarta 2026</p>
+              <p class="relative z-10 font-mono text-xs text-slate-500 max-w-[240px] mt-1">TITU — proposed by team "Naat Dulu" for I/O Festival 2026, organized by BEM FTI UNTAR</p>
             </div>
             <div class="font-mono text-xs text-slate-500 bg-cobalt-faint/60 p-2.5 rounded border border-cobalt/20">
-              <span class="text-cobalt font-bold">Caption:</span> TITU — proposed by team "Naat Dulu" for IOFEST, BINUS University Jakarta 2026
+              <span class="text-cobalt font-bold">Caption:</span> TITU — proposed by team "Naat Dulu" for I/O Festival 2026, organized by BEM FTI UNTAR
             </div>
           </div>
 
@@ -500,7 +492,7 @@
               <h3 class="font-display font-extrabold text-3xl sm:text-4xl text-slate-950">TITU — Play your city, own your track.</h3>
               <div class="flex flex-wrap gap-2 pt-1 font-mono text-xs">
                 <span class="px-2.5 py-1 rounded bg-slate-100 border border-slate-300 text-slate-700">Group project</span>
-                <span class="px-2.5 py-1 rounded bg-emerald-50 border border-emerald-300 text-emerald-800 font-bold">IOFEST Competition · Participant</span>
+                <span class="px-2.5 py-1 rounded bg-emerald-50 border border-emerald-300 text-emerald-800 font-bold">I/O Festival 2026 (BEM FTI UNTAR) · Participant</span>
                 <span class="px-2.5 py-1 rounded bg-slate-100 border border-slate-300 text-slate-700">IS Case Study Club</span>
               </div>
             </div>
@@ -515,7 +507,7 @@
             <div>
               <h5 class="font-mono text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">My role</h5>
               <p class="text-slate-700 text-sm leading-relaxed">
-                Built with two classmates for IOFEST, guided by the Information System Case Study Club. I owned the concept and UI direction — shaping the Apple-inspired glassmorphism interface, designing the isometric pixel-art city assets, and helping turn "commuting = city-building" into an actual working prototype instead of just a nice slide.
+                Built with two classmates for I/O Festival 2026, guided by the Information System Case Study Club. I owned the concept and UI direction — shaping the Apple-inspired glassmorphism interface, designing the isometric pixel-art city assets, and helping turn "commuting = city-building" into an actual working prototype instead of just a nice slide.
               </p>
             </div>
 
@@ -539,7 +531,7 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
               <div class="p-3.5 rounded-lg border border-slate-200 bg-white">
                 <h5 class="font-mono text-xs font-bold text-emerald-700 uppercase mb-1">Impact</h5>
-                <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">TITU went in as our full IOFEST proposal — a complete, interactive concept for making sustainable commuting fun, built end-to-end within the competition timeline.</p>
+                <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">TITU went in as our full I/O Festival 2026 submission — a complete, interactive concept for making sustainable commuting fun, built end-to-end within the competition timeline.</p>
               </div>
               <div class="p-3.5 rounded-lg border border-slate-200 bg-white">
                 <h5 class="font-mono text-xs font-bold text-emerald-700 uppercase mb-1">What I learned</h5>
@@ -602,15 +594,73 @@
         </div>
       </div>
 
-      <!-- PROJECT 4: WISE (placeholder detail) -->
-      <div class="bg-white rounded-2xl border-2 border-dashed border-cobalt/60 p-6 sm:p-10 shadow-blueprint scroll-mt-24" id="wise">
-        <div class="space-y-3">
-          <div class="font-mono text-xs font-bold text-cobalt tracking-wide uppercase">UI/UX Competition</div>
-          <h3 class="font-display font-extrabold text-3xl sm:text-4xl text-slate-950">WISE</h3>
-          <div class="p-4 rounded-lg bg-blue-50/50 border border-blue-200">
-            <p class="text-slate-800 text-sm leading-relaxed">
-              This section is a placeholder. Tell Kiro the competition name, your role, the problem WISE solves, what you built, and what you learned — and this whole block will be rewritten to match the style of your other projects.
-            </p>
+      <!-- PROJECT 4: WISE -->
+      <div class="bg-white rounded-2xl border-2 border-cobalt p-6 sm:p-10 shadow-blueprint scroll-mt-24" id="wise">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          <div class="lg:col-span-5 space-y-3">
+            <div class="aspect-[4/3] rounded-xl border-2 border-cobalt bg-gradient-to-br from-blue-50 via-white to-blue-100/50 p-6 flex flex-col items-center justify-center text-center relative overflow-hidden group">
+              <div class="absolute inset-0 bg-[radial-gradient(#1a4ee8_1px,transparent_1px)] [background-size:16px_16px] opacity-20"></div>
+              <div class="absolute top-3 left-3 font-mono text-[10px] uppercase font-bold px-2 py-0.5 rounded bg-blue-700 text-white">BEHAVIORAL FINANCE CONCEPT</div>
+              <div class="seal-circle w-24 h-24 text-[10px] text-blue-700 border-2 border-blue-600 rotate-[-10deg] bg-white/90 shadow-sm mb-2">ISFEST 2026<br/>PSYCHOLOGY<br/>OF MONEY</div>
+              <div class="relative z-10 font-display font-bold text-slate-800 text-lg">App Concept / Figma Prototype</div>
+              <p class="relative z-10 font-mono text-xs text-slate-500 max-w-[240px] mt-1">Wise — proposed for ISFEST, theme "The Psychology of Money"</p>
+            </div>
+            <div class="font-mono text-xs text-slate-500 bg-cobalt-faint/60 p-2.5 rounded border border-cobalt/20">
+              <span class="text-cobalt font-bold">Caption:</span> Wise — proposed for ISFEST, theme "The Psychology of Money"
+            </div>
+          </div>
+
+          <div class="lg:col-span-7 space-y-5">
+            <div class="space-y-2">
+              <div class="font-mono text-xs font-bold text-cobalt tracking-wide uppercase">ISFEST · Theme: The Psychology of Money</div>
+              <h3 class="font-display font-extrabold text-3xl sm:text-4xl text-slate-950">Wise</h3>
+              <div class="flex flex-wrap gap-2 pt-1 font-mono text-xs">
+                <span class="px-2.5 py-1 rounded bg-slate-100 border border-slate-300 text-slate-700">Group project</span>
+                <span class="px-2.5 py-1 rounded bg-blue-50 border border-blue-300 text-blue-800 font-bold">ISFEST Competition</span>
+                <span class="px-2.5 py-1 rounded bg-slate-100 border border-slate-300 text-slate-700">UI/UX &amp; Product Strategy</span>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-lg bg-blue-50/50 border border-blue-200">
+              <h5 class="font-mono text-xs font-bold text-blue-800 uppercase tracking-wider mb-1">The gist</h5>
+              <p class="text-slate-800 text-sm leading-relaxed">
+                Wise is a behavioral-finance app concept built for ISFEST's "Psychology of Money" theme. Instead of just another expense tracker, it's designed around the actual reason most people struggle with money: not bad math, but bad habits, emotions, and mindset around spending.
+              </p>
+            </div>
+
+            <div>
+              <h5 class="font-mono text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">The problem</h5>
+              <p class="text-slate-700 text-sm leading-relaxed">
+                Most people don't fail at managing money because they can't count — they fail because of emotional triggers, like stress-driven impulse buys, and a mindset about wealth that was never really examined. That gap between knowing and doing is exactly what standard budgeting apps tend to miss.
+              </p>
+            </div>
+
+            <div>
+              <h5 class="font-mono text-xs font-bold text-slate-500 uppercase tracking-wider mb-1.5">What we proposed</h5>
+              <ul class="space-y-1.5 text-sm text-slate-700 list-none pl-0 font-body">
+                <li class="flex items-start gap-2"><span class="font-mono text-blue-600 font-bold text-xs mt-0.5">●</span><span><strong>Emotion-based tracking</strong> — logging the mood behind a transaction to surface patterns of emotional spending</span></li>
+                <li class="flex items-start gap-2"><span class="font-mono text-blue-600 font-bold text-xs mt-0.5">●</span><span><strong>Mindset-building</strong> — bite-sized, gamified insights that teach the psychology of money without feeling like a lecture</span></li>
+                <li class="flex items-start gap-2"><span class="font-mono text-blue-600 font-bold text-xs mt-0.5">●</span><span><strong>Smart budgeting</strong> — reminders and goal visualizations that nudge users toward delayed gratification instead of impulse spending</span></li>
+              </ul>
+            </div>
+
+            <div>
+              <h5 class="font-mono text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">My role</h5>
+              <p class="text-slate-700 text-sm leading-relaxed">
+                I led the UI/UX side — building wireframes and a high-fidelity Figma prototype with a clean, minimal, Apple-leaning glassmorphism look so a topic as heavy as "financial psychology" would feel approachable instead of intimidating. I also shaped the user journey around the Psychology of Money brief and put together the pitch deck for the judges, plus mapped the underlying system logic so every feature made sense end-to-end.
+              </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+              <div class="p-3.5 rounded-lg border border-slate-200 bg-white">
+                <h5 class="font-mono text-xs font-bold text-blue-700 uppercase mb-1">Impact</h5>
+                <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">Wise went in as our full ISFEST submission — a complete concept and prototype that reframed "budgeting app" as something closer to a quiet, judgment-free coach for your money habits.</p>
+              </div>
+              <div class="p-3.5 rounded-lg border border-slate-200 bg-white">
+                <h5 class="font-mono text-xs font-bold text-blue-700 uppercase mb-1">What I learned</h5>
+                <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">Designing around a psychological theme instead of a technical one pushed me to think past screens and flows — every interaction had to actually feel non-judgmental, which changed how I wrote copy and chose colors, not just how I arranged buttons.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -858,13 +908,13 @@
               <li class="flex items-start gap-2"><span class="font-mono text-cobalt font-bold text-xs mt-0.5">●</span><span><strong>Event Advisor</strong> — HIMSISFO 2026: EXPLORIA &amp; VIBEZ</span></li>
               <li class="flex items-start gap-2"><span class="font-mono text-cobalt font-bold text-xs mt-0.5">●</span><span><strong>Vice Coordinator, Graphic Design</strong> — Dig In HIMSISFO 2025: FUSION</span></li>
               <li class="flex items-start gap-2"><span class="font-mono text-cobalt font-bold text-xs mt-0.5">●</span><span><strong>Vice Coordinator, Publication &amp; Documentation</strong> — Immersion HIMSISFO 2025: NEXT, a 7-day international program</span></li>
-              <li class="flex items-start gap-2"><span class="font-mono text-cobalt font-bold text-xs mt-0.5">●</span><span><strong>Master of Ceremonies</strong> — six appearances and counting (see below)</span></li>
+              <li class="flex items-start gap-2"><span class="font-mono text-cobalt font-bold text-xs mt-0.5">●</span><span><strong>Master of Ceremonies</strong> — five appearances and counting (see below)</span></li>
             </ul>
           </div>
           <div class="space-y-2">
             <h5 class="font-mono text-xs font-bold text-slate-500 uppercase tracking-wider">Impact &amp; Reflections</h5>
             <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">
-              <strong>Impact:</strong> I designed the Instagram feed and story content carrying each event's visual identity, kept publication and documentation running smoothly through a week-long international program, and hosted on stage across six HIMSISFO events.
+              <strong>Impact:</strong> I designed the Instagram feed and story content carrying each event's visual identity, kept publication and documentation running smoothly through a week-long international program, and hosted on stage across five HIMSISFO events.
             </p>
             <p class="text-xs sm:text-sm text-slate-700 leading-relaxed pt-1">
               <strong>What I learned:</strong> This is where I discovered a skill I didn't know I had — being an MC. Two years of design work taught me consistency and visual storytelling, but stepping on stage taught me something a design brief never could: how to hold a room, think on my feet, and stay composed live, in front of an audience.
@@ -875,13 +925,13 @@
         <!-- Button that leads to the MC roles detail grid -->
         <div class="pt-2">
           <button class="inline-flex items-center gap-2 px-4 py-2 rounded font-mono text-xs font-bold uppercase bg-white text-cobalt border-2 border-cobalt shadow-blueprint-sm hover:bg-cobalt hover:text-white transition-all" onclick="goToProjectDetail('himsisfo-mc-roles')">
-            See all 6 MC appearances <span>↓</span>
+            See all 5 MC appearances <span>↓</span>
           </button>
         </div>
 
-        <!-- MC roles grid: 6 boxes -->
+        <!-- MC roles grid: 5 boxes -->
         <div class="pt-4 border-t border-cobalt/20 scroll-mt-24" id="himsisfo-mc-roles">
-          <div class="font-mono text-[11px] text-slate-500 uppercase font-bold tracking-wider mb-3">MASTER OF CEREMONIES // 6 APPEARANCES</div>
+          <div class="font-mono text-[11px] text-slate-500 uppercase font-bold tracking-wider mb-3">MASTER OF CEREMONIES // 5 APPEARANCES</div>
           <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
             <div class="rounded-lg border border-cobalt/30 bg-paper p-3 text-center">
               <span class="material-symbols-outlined text-cobalt text-2xl">mic</span>
@@ -908,13 +958,8 @@
               <div class="font-mono text-[10px] font-bold text-cobalt uppercase mt-1">BALON HIMSISFO 2026: NOVA</div>
               <p class="text-[11px] text-slate-500 mt-1">MC for the 2027/2028 chairperson election</p>
             </div>
-            <!-- PLACEHOLDER: 6th MC event — tell Kiro which event this is -->
-            <div class="rounded-lg border border-dashed border-cobalt/50 bg-paper/60 p-3 text-center opacity-70">
-              <span class="material-symbols-outlined text-cobalt text-2xl">add_circle</span>
-              <div class="font-mono text-[10px] font-bold text-cobalt uppercase mt-1">6th event?</div>
-              <p class="text-[11px] text-slate-500 mt-1">Tell Kiro which event this is</p>
-            </div>
           </div>
+          <p class="font-mono text-[11px] text-slate-400 mt-3 italic">Full event write-ups and photos for each appearance are on my <a class="text-cobalt font-bold not-italic hover:underline" href="https://www.linkedin.com/in/mariel-fang-a05482319/" rel="noopener" target="_blank">LinkedIn</a>.</p>
         </div>
 
         <p class="font-mono text-xs text-slate-400 italic">+ several additional staff and volunteer roles across 2024 – 2026</p>
@@ -964,15 +1009,15 @@
         </div>
       </div>
 
-      <!-- CERT 2: HIMSISFO Certificate of Merit -->
+      <!-- CERT 2: HIMSISFO Certificate of Contribution -->
       <div class="bg-white rounded-xl border-2 border-cobalt p-6 shadow-blueprint hover:shadow-blueprint-lift transition-all flex flex-col justify-between space-y-4">
         <div class="space-y-3">
           <div class="flex items-center justify-between font-mono text-xs">
-            <span class="px-2 py-0.5 rounded bg-amber-50 text-amber-800 font-bold border border-amber-300">Department Merit &amp; Leadership</span>
-            <span class="text-slate-500">November 2025</span>
+            <span class="px-2 py-0.5 rounded bg-amber-50 text-amber-800 font-bold border border-amber-300">Master of Ceremony</span>
+            <span class="text-slate-500">February 2026</span>
           </div>
-          <h3 class="font-display font-bold text-xl text-slate-950">HIMSISFO Official Certificate of Merit</h3>
-          <p class="font-mono text-xs text-slate-500">HIMSISFO — Commission 3: Information</p>
+          <h3 class="font-display font-bold text-xl text-slate-950">Certificate of Contribution</h3>
+          <p class="font-mono text-xs text-slate-500">HIMSISFO — Farewell Party &amp; Yearbook 2026: Film</p>
           <div class="aspect-[1.414/1] rounded-lg border-2 border-dashed border-amber-300 bg-gradient-to-br from-amber-50/50 via-white to-blue-50/50 p-4 flex flex-col items-center justify-center text-center relative group">
             <div class="w-10 h-10 rounded-full bg-white border border-amber-500 flex items-center justify-center shadow-sm text-amber-700 mb-2">
               <span class="material-symbols-outlined text-xl">workspace_premium</span>
@@ -980,11 +1025,11 @@
             <div class="font-display font-bold text-xs text-slate-800">Certificate Scan Placeholder</div>
             <p class="font-mono text-[10px] text-slate-400 mt-0.5 max-w-[200px]">Upload / Insert Certificate Image Here<br/><code class="text-cobalt">&lt;img src="..." /&gt;</code></p>
           </div>
-          <p class="text-xs text-slate-600 leading-relaxed font-body">Conferred for dedication as Master of Ceremonies, publication design leader, and coordinator across flagship events.</p>
+          <p class="text-xs text-slate-600 leading-relaxed font-body">Conferred for outstanding dedication and contribution as Master of Ceremony at Farewell Party and Yearbook HIMSISFO 2026: Film, held on Sunday, 1 February 2026.</p>
         </div>
         <div class="pt-3 border-t border-cobalt/20 flex items-center justify-between font-mono text-xs">
-          <span class="text-[10px] text-slate-400 font-bold">HMS-C3-2025-018</span>
-          <button class="px-3 py-1.5 rounded bg-cobalt text-white font-bold hover:bg-cobalt-hover transition-colors shadow-blueprint-sm" onclick="showCertViewer('HIMSISFO Official Certificate of Merit &amp; Leadership', 'HIMSISFO — Commission 3: Information', 'HMS-C3-2025-018', 'Official Certificate of Merit &amp; Leadership for exemplary service as Master of Ceremonies, publication designer, and coordinator across flagship department events.', 'November 2025', 'Official Merit')">View Doc →</button>
+          <span class="text-[10px] text-slate-400 font-bold">HIMSISFO-FILM-2026</span>
+          <button class="px-3 py-1.5 rounded bg-cobalt text-white font-bold hover:bg-cobalt-hover transition-colors shadow-blueprint-sm" onclick="showCertViewer('Certificate of Contribution', 'HIMSISFO — Farewell Party &amp; Yearbook 2026: Film', 'HIMSISFO-FILM-2026', 'HIMSISFO respectfully and proudly presents this certificate to Mariel for the outstanding dedication and contribution as Master of Ceremony at Farewell Party and Yearbook HIMSISFO 2026: Film on Sunday, 1 February 2026. Signed by Sudiana, S.Kom., MMSI., CDMS (Deputy Head of Information Systems School Student &amp; Alumni) and Azriel Christopher Avendry (General President of HIMSISFO 2025/2026).', '1 February 2026', 'Certificate of Contribution')">View Doc →</button>
         </div>
       </div>
 
@@ -993,10 +1038,10 @@
         <div class="space-y-3">
           <div class="flex items-center justify-between font-mono text-xs">
             <span class="px-2 py-0.5 rounded bg-rose-50 text-rose-700 font-bold border border-rose-300">Business Case Semifinalist</span>
-            <span class="text-slate-500">October 2025</span>
+            <span class="text-slate-500">2026</span>
           </div>
-          <h3 class="font-display font-bold text-xl text-slate-950">PROGRESSIO Semifinalist Honor</h3>
-          <p class="font-mono text-xs text-slate-500">PROGRESSIO Competition · Team FIRSTIMERZ</p>
+          <h3 class="font-display font-bold text-xl text-slate-950">Certificate of Appreciation</h3>
+          <p class="font-mono text-xs text-slate-500">Progressio Business Case Competition 2026 · Team firstimerz</p>
           <div class="aspect-[1.414/1] rounded-lg border-2 border-dashed border-rose-300 bg-gradient-to-br from-rose-50/50 via-white to-blue-50/50 p-4 flex flex-col items-center justify-center text-center relative group">
             <div class="w-10 h-10 rounded-full bg-white border border-rose-500 flex items-center justify-center shadow-sm text-rose-700 mb-2">
               <span class="material-symbols-outlined text-xl">emoji_events</span>
@@ -1004,23 +1049,23 @@
             <div class="font-display font-bold text-xs text-slate-800">Certificate Scan Placeholder</div>
             <p class="font-mono text-[10px] text-slate-400 mt-0.5 max-w-[200px]">Upload / Insert Certificate Image Here<br/><code class="text-cobalt">&lt;img src="..." /&gt;</code></p>
           </div>
-          <p class="text-xs text-slate-600 leading-relaxed font-body">National Business Case semifinalist honor for proposing an A.I.R. IP-collaboration growth strategy for Torch.</p>
+          <p class="text-xs text-slate-600 leading-relaxed font-body">Recognized as a Semifinalist in the Progressio Business Case Competition 2026, themed "Beyond Connectivity: Empowering Sustainable and Responsible Communities Through Creative and Digital Innovation."</p>
         </div>
         <div class="pt-3 border-t border-cobalt/20 flex items-center justify-between font-mono text-xs">
-          <span class="text-[10px] text-slate-400 font-bold">PROG-2026-FST-119</span>
-          <button class="px-3 py-1.5 rounded bg-cobalt text-white font-bold hover:bg-cobalt-hover transition-colors shadow-blueprint-sm" onclick="showCertViewer('Semifinalist Honor Certificate', 'PROGRESSIO National Business Case Committee', 'PROG-2026-FST-119', 'National Business Case semifinalist honor for proposing an A.I.R. IP-collaboration growth strategy for urban outdoor brand Torch with team FIRSTIMERZ.', 'October 2025', 'National Semifinalist')">View Doc →</button>
+          <span class="text-[10px] text-slate-400 font-bold">PROGRESSIO-2026-FIRSTIMERZ</span>
+          <button class="px-3 py-1.5 rounded bg-cobalt text-white font-bold hover:bg-cobalt-hover transition-colors shadow-blueprint-sm" onclick="showCertViewer('Certificate of Appreciation', 'Progressio Consulting Group 2025/2026', 'PROGRESSIO-2026-FIRSTIMERZ', 'Presented to Mariel from team firstimerz, for participating as Semifinalist in the Progressio Business Case Competition 2026 with the theme: Beyond Connectivity — Empowering Sustainable and Responsible Communities Through Creative and Digital Innovation. Signed by Muhammad Davin Ardhan Hafiz, President.', '2026', 'Semifinalist')">View Doc →</button>
         </div>
       </div>
 
-      <!-- CERT 4: IOFEST Finalist Award -->
+      <!-- CERT 4: I/O Festival 2026 Participant -->
       <div class="bg-white rounded-xl border-2 border-cobalt p-6 shadow-blueprint hover:shadow-blueprint-lift transition-all flex flex-col justify-between space-y-4">
         <div class="space-y-3">
           <div class="flex items-center justify-between font-mono text-xs">
-            <span class="px-2 py-0.5 rounded bg-emerald-50 text-emerald-800 font-bold border border-emerald-300">Civic Tech &amp; UI/UX</span>
-            <span class="text-slate-500">January 2026</span>
+            <span class="px-2 py-0.5 rounded bg-emerald-50 text-emerald-800 font-bold border border-emerald-300">UI/UX · Participant</span>
+            <span class="text-slate-500">4–5 June 2026</span>
           </div>
-          <h3 class="font-display font-bold text-xl text-slate-950">IOFEST Finalist Award</h3>
-          <p class="font-mono text-xs text-slate-500">IOFEST Committee &amp; BINUS University · TITU</p>
+          <h3 class="font-display font-bold text-xl text-slate-950">I/O Festival 2026</h3>
+          <p class="font-mono text-xs text-slate-500">UI/UX National Level · BEM FTI UNTAR · TITU</p>
           <div class="aspect-[1.414/1] rounded-lg border-2 border-dashed border-emerald-300 bg-gradient-to-br from-emerald-50/50 via-white to-blue-50/50 p-4 flex flex-col items-center justify-center text-center relative group">
             <div class="w-10 h-10 rounded-full bg-white border border-emerald-500 flex items-center justify-center shadow-sm text-emerald-700 mb-2">
               <span class="material-symbols-outlined text-xl">award_star</span>
@@ -1028,23 +1073,23 @@
             <div class="font-display font-bold text-xs text-slate-800">Certificate Scan Placeholder</div>
             <p class="font-mono text-[10px] text-slate-400 mt-0.5 max-w-[200px]">Upload / Insert Certificate Image Here<br/><code class="text-cobalt">&lt;img src="..." /&gt;</code></p>
           </div>
-          <p class="text-xs text-slate-600 leading-relaxed font-body">Finalist honor in Good Governance &amp; Civic Tech category for TITU — transit gamification platform.</p>
+          <p class="text-xs text-slate-600 leading-relaxed font-body">Certificate of participation in the UI/UX National Level Student/Public category of I/O Festival 2026, for TITU — a transit gamification concept.</p>
         </div>
         <div class="pt-3 border-t border-cobalt/20 flex items-center justify-between font-mono text-xs">
-          <span class="text-[10px] text-slate-400 font-bold">IOF-2026-TITU-084</span>
-          <button class="px-3 py-1.5 rounded bg-cobalt text-white font-bold hover:bg-cobalt-hover transition-colors shadow-blueprint-sm" onclick="showCertViewer('IOFEST 2026 Competition Finalist', 'IOFEST Committee &amp; BINUS University', 'IOF-2026-TITU-084', 'Finalist recognition in Civic Tech &amp; Good Governance for TITU — an Apple-glassmorphic transit gamification and carbon-saving platform.', 'January 2026', 'Finalist Credential')">View Doc →</button>
+          <span class="text-[10px] text-slate-400 font-bold">IOFESTIVAL-2026-UIUX</span>
+          <button class="px-3 py-1.5 rounded bg-cobalt text-white font-bold hover:bg-cobalt-hover transition-colors shadow-blueprint-sm" onclick="showCertViewer('Sertifikat — Peserta', 'I/O Festival 2026 · BEM FTI UNTAR', 'IOFESTIVAL-2026-UIUX', 'Diberikan kepada Mariel sebagai Peserta UI/UX Tingkat Nasional Mahasiswa/Umum, I/O Festival 2026, diselenggarakan oleh BEM FTI UNTAR pada tanggal 4-5 Juni 2026. Signed by Gian Kenar Javier (Ketua Pelaksana) and Felix Jonathan (Penanggung Jawab).', '4–5 June 2026', 'Participant')">View Doc →</button>
         </div>
       </div>
 
-      <!-- CERT 5: Cloud Computing Specialist -->
+      <!-- CERT 5: AWS Academy Graduate - Cloud Foundations -->
       <div class="bg-white rounded-xl border-2 border-cobalt p-6 shadow-blueprint hover:shadow-blueprint-lift transition-all flex flex-col justify-between space-y-4">
         <div class="space-y-3">
           <div class="flex items-center justify-between font-mono text-xs">
             <span class="px-2 py-0.5 rounded bg-purple-50 text-purple-800 font-bold border border-purple-300">Cloud Infrastructure</span>
-            <span class="text-slate-500">August 2025</span>
+            <span class="text-slate-500">June 2026</span>
           </div>
-          <h3 class="font-display font-bold text-xl text-slate-950">Cloud Computing Specialist</h3>
-          <p class="font-mono text-xs text-slate-500">Cloud Academy &amp; BINUS IS Department</p>
+          <h3 class="font-display font-bold text-xl text-slate-950">AWS Academy Graduate — Cloud Foundations</h3>
+          <p class="font-mono text-xs text-slate-500">AWS Academy · Training Badge</p>
           <div class="aspect-[1.414/1] rounded-lg border-2 border-dashed border-purple-300 bg-gradient-to-br from-purple-50/50 via-white to-blue-50/50 p-4 flex flex-col items-center justify-center text-center relative group">
             <div class="w-10 h-10 rounded-full bg-white border border-purple-500 flex items-center justify-center shadow-sm text-purple-700 mb-2">
               <span class="material-symbols-outlined text-xl">cloud_sync</span>
@@ -1052,15 +1097,15 @@
             <div class="font-display font-bold text-xs text-slate-800">Certificate Scan Placeholder</div>
             <p class="font-mono text-[10px] text-slate-400 mt-0.5 max-w-[200px]">Upload / Insert Certificate Image Here<br/><code class="text-cobalt">&lt;img src="..." /&gt;</code></p>
           </div>
-          <p class="text-xs text-slate-600 leading-relaxed font-body">Certified competence in cloud computing architecture, AWS/GCP essentials, IAM policies, and cloud storage orchestration.</p>
+          <p class="text-xs text-slate-600 leading-relaxed font-body">Certificate of Completion for AWS Academy Graduate — Cloud Foundations, 20 course hours completed. Digital badge verified via Credly.</p>
         </div>
         <div class="pt-3 border-t border-cobalt/20 flex items-center justify-between font-mono text-xs">
-          <span class="text-[10px] text-slate-400 font-bold">CC-SP-2025-9921</span>
-          <button class="px-3 py-1.5 rounded bg-cobalt text-white font-bold hover:bg-cobalt-hover transition-colors shadow-blueprint-sm" onclick="showCertViewer('Cloud Computing Specialist', 'Cloud Academy &amp; BINUS IS Dept', 'CC-SP-2025-9921', 'Foundational competence in cloud infrastructure architecture, AWS/GCP services, IAM policies, and cloud cost management.', 'August 2025', 'Certified Specialist')">View Doc →</button>
+          <span class="text-[10px] text-slate-400 font-bold">AWS-CF-20260615</span>
+          <button class="px-3 py-1.5 rounded bg-cobalt text-white font-bold hover:bg-cobalt-hover transition-colors shadow-blueprint-sm" onclick="showCertViewer('AWS Academy Graduate — Cloud Foundations', 'AWS Academy', 'AWS-CF-20260615', 'Certificate of Completion for AWS Academy Graduate - Cloud Foundations - Training Badge. Course hours completed: 20 hours. Issued on 06/15/2026. Digital badge verified via Credly (credly.com/go/fx4s1qI3).', '06/15/2026', 'Training Badge')">View Doc →</button>
         </div>
       </div>
 
-      <!-- CERT 6: ISFEST Participant (new, placeholder details) -->
+      <!-- CERT 6: ISFEST Participant — Wise (placeholder, needs exact date / credential ID) -->
       <div class="bg-white rounded-xl border-2 border-dashed border-cobalt/60 p-6 shadow-blueprint hover:shadow-blueprint-lift transition-all flex flex-col justify-between space-y-4">
         <div class="space-y-3">
           <div class="flex items-center justify-between font-mono text-xs">
@@ -1068,7 +1113,7 @@
             <span class="text-slate-500">Date TBD</span>
           </div>
           <h3 class="font-display font-bold text-xl text-slate-950">ISFEST Participant Certificate</h3>
-          <p class="font-mono text-xs text-slate-500">ISFEST Committee</p>
+          <p class="font-mono text-xs text-slate-500">ISFEST Committee · Wise, theme "Psychology of Money"</p>
           <div class="aspect-[1.414/1] rounded-lg border-2 border-dashed border-blue-300 bg-gradient-to-br from-blue-50/50 via-white to-blue-50/50 p-4 flex flex-col items-center justify-center text-center relative group">
             <div class="w-10 h-10 rounded-full bg-white border border-blue-500 flex items-center justify-center shadow-sm text-blue-700 mb-2">
               <span class="material-symbols-outlined text-xl">confirmation_number</span>
@@ -1076,11 +1121,11 @@
             <div class="font-display font-bold text-xs text-slate-800">Certificate Scan Placeholder</div>
             <p class="font-mono text-[10px] text-slate-400 mt-0.5 max-w-[200px]">Upload / Insert Certificate Image Here<br/><code class="text-cobalt">&lt;img src="..." /&gt;</code></p>
           </div>
-          <p class="text-xs text-slate-600 leading-relaxed font-body">[ Placeholder — give Kiro the exact date, your role at ISFEST, and credential ID so this card matches the others. ]</p>
+          <p class="text-xs text-slate-600 leading-relaxed font-body">[ Placeholder — give Kiro the exact date and credential ID from your ISFEST certificate for Wise so this card matches the others. ]</p>
         </div>
         <div class="pt-3 border-t border-cobalt/20 flex items-center justify-between font-mono text-xs">
           <span class="text-[10px] text-slate-400 font-bold">ISFEST-TBD</span>
-          <button class="px-3 py-1.5 rounded bg-cobalt text-white font-bold hover:bg-cobalt-hover transition-colors shadow-blueprint-sm" onclick="showCertViewer('ISFEST Participant Certificate', 'ISFEST Committee', 'ISFEST-TBD', 'Certificate of participation at ISFEST — details pending.', 'Date TBD', 'Participant')">View Doc →</button>
+          <button class="px-3 py-1.5 rounded bg-cobalt text-white font-bold hover:bg-cobalt-hover transition-colors shadow-blueprint-sm" onclick="showCertViewer('ISFEST Participant Certificate', 'ISFEST Committee', 'ISFEST-TBD', 'Certificate of participation at ISFEST for Wise, themed Psychology of Money — details pending.', 'Date TBD', 'Participant')">View Doc →</button>
         </div>
       </div>
     </div>
@@ -1263,6 +1308,9 @@
     </div>
   </div>
 </div>
+
+<!-- Custom floating cursor shown while hovering project tiles in "Explore the Work" -->
+<div id="customCursor">View</div>
 
 <!-- JS logic lives in its own file now instead of an inline <script> -->
 <script src="js/main.js"></script>

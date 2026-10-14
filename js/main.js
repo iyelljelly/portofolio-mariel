@@ -40,6 +40,31 @@ function goToProjectDetail(anchorId) {
   }, 1200);
 }
 
+// ---- Custom "VIEW" cursor on project tiles (Elaine Yu style) ---------
+document.addEventListener('DOMContentLoaded', function () {
+  var cursor = document.getElementById('customCursor');
+  if (!cursor) return;
+
+  var isCoarsePointer = window.matchMedia && window.matchMedia('(pointer: coarse)').matches;
+  if (isCoarsePointer) return; // skip entirely on touch devices
+
+  var tiles = document.querySelectorAll('.project-tile-link');
+
+  window.addEventListener('mousemove', function (e) {
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top = e.clientY + 'px';
+  });
+
+  tiles.forEach(function (tile) {
+    tile.addEventListener('mouseenter', function () {
+      cursor.classList.add('is-active');
+    });
+    tile.addEventListener('mouseleave', function () {
+      cursor.classList.remove('is-active');
+    });
+  });
+});
+
 // ---- Highlight active nav link while scrolling ------------------------
 document.addEventListener('DOMContentLoaded', function () {
   var sections = document.querySelectorAll('main section[id]');
