@@ -1,0 +1,131 @@
+/* ==========================================================================
+   Mariel Fang — Portfolio Custom Styles
+   Extracted from the original Stitch export so Tailwind CDN config + custom
+   utility classes live in a normal, editable CSS file.
+   ========================================================================== */
+
+:root {
+  --cobalt: #1a4ee8;
+  --paper-grid: #dce7fa;
+}
+
+body {
+  background-color: #f8faff;
+  background-image:
+    radial-gradient(var(--paper-grid) 1px, transparent 1px),
+    linear-gradient(to right, rgba(220, 231, 250, 0.4) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(220, 231, 250, 0.4) 1px, transparent 1px);
+  background-size: 24px 24px, 120px 120px, 120px 120px;
+  color: #0b162c;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Ticket / Stamp cutout utility */
+.stamp-badge {
+  border: 1.5px dashed var(--cobalt);
+  background: #ffffff;
+  box-shadow: 2px 2px 0px rgba(26, 78, 232, 0.2);
+}
+
+.blueprint-card {
+  background: #ffffff;
+  border: 1.5px solid #1a4ee8;
+  box-shadow: 4px 4px 0px #1a4ee8;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.blueprint-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px #1a4ee8;
+}
+
+.blueprint-card-dark {
+  background: #0b162c;
+  border: 1.5px solid #1a4ee8;
+  box-shadow: 4px 4px 0px #1a4ee8;
+  color: #ffffff;
+}
+
+/* Metro transit active indicator line */
+.metro-line-track {
+  position: relative;
+}
+.metro-line-track::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 8px;
+  right: 8px;
+  height: 2px;
+  background: #c7d9fc;
+  z-index: 0;
+}
+
+/* Elaine Yu inspired blueprint stamp seal */
+.seal-circle {
+  border: 2px dashed #1a4ee8;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+}
+
+/* Hero stat tiles */
+.stat-tile {
+  background: #ffffff;
+  border: 1.5px solid rgba(26, 78, 232, 0.25);
+  border-radius: 0.75rem;
+  padding: 0.65rem 0.5rem;
+  text-align: center;
+}
+
+/* Skill icon tile (hero/about skills grid) */
+.skill-icon-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 1rem 0.5rem;
+  border: 1.5px solid rgba(26, 78, 232, 0.3);
+  border-radius: 0.9rem;
+  background: #ffffff;
+  text-align: center;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.skill-icon-tile:hover {
+  transform: translateY(-3px);
+  box-shadow: 3px 3px 0px #1a4ee8;
+}
+
+/* Social icon round buttons in hero card */
+.social-icon-btn {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid #1a4ee8;
+  background: #ffffff;
+  color: #1a4ee8;
+  transition: all 0.15s ease;
+}
+.social-icon-btn:hover {
+  background: #1a4ee8;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* Clickable project tile -> detail jump cue */
+.project-tile-link {
+  cursor: pointer;
+}
+
+::selection {
+  background: #1a4ee8;
+  color: #ffffff;
+}

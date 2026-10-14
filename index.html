@@ -1,0 +1,1270 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mariel Fang — Portfolio &amp; Blueprint Archive</title>
+
+<!-- Tailwind CDN & Fonts -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+
+<!-- Tailwind config lives in its own file now instead of an inline <script> -->
+<script src="js/tailwind-config.js"></script>
+<!-- Custom styles live in a normal, editable CSS file -->
+<link rel="stylesheet" href="css/style.css"/>
+</head>
+<body class="relative min-h-screen text-slate-900 selection:bg-cobalt selection:text-white">
+
+<!-- TOP SYSTEM STATUS / SUB-BAR -->
+<div class="border-b border-cobalt/20 bg-white/70 backdrop-blur-md px-4 py-1.5 text-xs font-mono text-slate-600 flex justify-between items-center z-50 relative">
+  <div class="flex items-center gap-2">
+    <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+    <span class="font-bold text-cobalt tracking-wider">SYSTEM://MF-2026.SYS</span>
+    <span class="hidden sm:inline text-slate-400">|</span>
+    <span class="hidden sm:inline text-slate-500">BINUS UNIVERSITY — INFORMATION SYSTEMS</span>
+  </div>
+  <div class="flex items-center gap-3">
+    <span class="px-2 py-0.5 rounded bg-cobalt/10 text-cobalt border border-cobalt/30 font-semibold tracking-wider text-[11px] uppercase">
+      STUDENT &amp; BUILDER MODE ●
+    </span>
+    <span class="text-slate-400 hidden md:inline">EDITION: KIRO_V3</span>
+  </div>
+</div>
+
+<!-- METRO TRANSIT HEADER & NAVIGATION -->
+<header class="sticky top-0 z-40 bg-white/85 backdrop-blur-lg border-b-2 border-cobalt shadow-sm">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+    <a class="group flex items-center gap-2.5" href="#top">
+      <div class="w-9 h-9 rounded bg-cobalt text-white flex items-center justify-center font-mono font-bold text-base shadow-blueprint-sm group-hover:rotate-6 transition-transform">
+        MF
+      </div>
+      <div>
+        <div class="font-display font-bold text-lg text-slate-950 tracking-tight leading-none group-hover:text-cobalt transition-colors">
+          Mariel Fang
+        </div>
+        <div class="font-mono text-[10px] text-slate-500 uppercase tracking-widest leading-tight">
+          Portfolio &amp; Spec Archive
+        </div>
+      </div>
+    </a>
+
+    <nav class="hidden lg:flex items-center gap-1 font-mono text-xs font-medium">
+      <div class="metro-line-track flex items-center gap-2 px-3 py-1 bg-cobalt-faint/60 rounded-full border border-cobalt/25">
+        <a class="relative z-10 flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white border border-cobalt/30 hover:border-cobalt hover:bg-cobalt hover:text-white transition-all text-slate-800" href="#about">
+          <span class="w-1.5 h-1.5 rounded-full bg-cobalt"></span> About
+        </a>
+        <a class="relative z-10 flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white border border-cobalt/30 hover:border-cobalt hover:bg-cobalt hover:text-white transition-all text-slate-800" href="#work">
+          <span class="w-1.5 h-1.5 rounded-full bg-cobalt"></span> Work
+        </a>
+        <a class="relative z-10 flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white border border-cobalt/30 hover:border-cobalt hover:bg-cobalt hover:text-white transition-all text-slate-800" href="#experience">
+          <span class="w-1.5 h-1.5 rounded-full bg-cobalt"></span> Experience
+        </a>
+        <a class="relative z-10 flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white border border-cobalt/30 hover:border-cobalt hover:bg-cobalt hover:text-white transition-all text-slate-800" href="#leadership">
+          <span class="w-1.5 h-1.5 rounded-full bg-cobalt"></span> Leadership
+        </a>
+        <a class="relative z-10 flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white border border-cobalt/30 hover:border-cobalt hover:bg-cobalt hover:text-white transition-all text-slate-800" href="#certificates">
+          <span class="w-1.5 h-1.5 rounded-full bg-cobalt"></span> Certificates
+        </a>
+        <a class="relative z-10 flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white border border-cobalt/30 hover:border-cobalt hover:bg-cobalt hover:text-white transition-all text-slate-800" href="#skills">
+          <span class="w-1.5 h-1.5 rounded-full bg-cobalt"></span> Skills
+        </a>
+      </div>
+    </nav>
+
+    <div class="flex items-center gap-3">
+      <a class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-1.5 font-mono text-xs font-bold uppercase rounded bg-cobalt text-white border border-cobalt shadow-blueprint-sm hover:shadow-none hover:translate-x-0.5 hover:translate-y-0.5 transition-all" href="#contact">
+        <span class="material-symbols-outlined text-sm">mail</span> Let's Connect
+      </a>
+      <a class="lg:hidden p-2 rounded border border-cobalt text-cobalt font-mono text-xs" href="#work">
+        Menu ↓
+      </a>
+    </div>
+  </div>
+
+  <div class="lg:hidden flex items-center gap-2 overflow-x-auto px-4 py-2 border-t border-cobalt/20 bg-white/90 text-xs font-mono no-scrollbar">
+    <a class="whitespace-nowrap px-2.5 py-1 rounded bg-cobalt-faint border border-cobalt/30 text-cobalt font-bold" href="#about">● About</a>
+    <a class="whitespace-nowrap px-2.5 py-1 rounded bg-white border border-cobalt/30 text-slate-700" href="#work">● Work</a>
+    <a class="whitespace-nowrap px-2.5 py-1 rounded bg-white border border-cobalt/30 text-slate-700" href="#experience">● Experience</a>
+    <a class="whitespace-nowrap px-2.5 py-1 rounded bg-white border border-cobalt/30 text-slate-700" href="#leadership">● Leadership</a>
+    <a class="whitespace-nowrap px-2.5 py-1 rounded bg-white border border-cobalt/30 text-slate-700" href="#certificates">● Certificates</a>
+    <a class="whitespace-nowrap px-2.5 py-1 rounded bg-white border border-cobalt/30 text-slate-700" href="#skills">● Skills</a>
+    <a class="whitespace-nowrap px-2.5 py-1 rounded bg-cobalt text-white font-bold" href="#contact">● Contact</a>
+  </div>
+</header>
+
+<main class="max-w-6xl mx-auto px-4 sm:px-6 pt-10 pb-24 space-y-24" id="top">
+
+  <!-- ======================== HERO / PAGE 1 — THE HOOK ======================== -->
+  <section class="relative pt-6 min-h-[80vh] flex flex-col justify-center" id="hero">
+    <div class="absolute -top-3 right-0 font-mono text-[11px] text-cobalt/50 tracking-wider hidden sm:block">
+      SPEC SHEET // REF. MARIEL-2026 // BATCH 29
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+
+      <!-- Left: Big photo + identity stamp -->
+      <div class="lg:col-span-5 order-1 lg:order-1">
+        <div class="bg-white border-2 border-cobalt rounded-2xl p-5 shadow-blueprint relative overflow-hidden">
+          <div class="flex items-center justify-between pb-3 border-b-2 border-dashed border-cobalt/30 font-mono text-[11px] text-slate-500">
+            <span class="text-cobalt font-bold tracking-widest">ID PASS // CREATIVE SPEC</span>
+            <span class="bg-cobalt-faint px-2 py-0.5 rounded border border-cobalt/30 text-cobalt font-bold">2026 ACTIVE</span>
+          </div>
+
+          <!-- MAIN PHOTO SLOT — swap this div's contents for <img src="assets/img/mariel-hero.jpg" ...> -->
+          <div class="mt-4 aspect-[4/5] rounded-xl border-2 border-cobalt bg-gradient-to-br from-cobalt-faint via-white to-blue-50/70 flex flex-col items-center justify-center text-center relative group overflow-hidden">
+            <div class="absolute inset-0 bg-[radial-gradient(#1a4ee8_1px,transparent_1px)] [background-size:16px_16px] opacity-25"></div>
+            <div class="absolute top-3 right-3 rotate-12 seal-circle w-20 h-20 text-[9px] text-cobalt bg-white/90 shadow-sm border-2 border-cobalt">
+              <span>★ VERIFIED ★<br/>BINUS IS<br/>TALENT</span>
+            </div>
+            <div class="relative z-10 w-24 h-24 rounded-full bg-white border-2 border-cobalt flex items-center justify-center shadow-blueprint-sm mb-3">
+              <span class="material-symbols-outlined text-4xl text-cobalt">person</span>
+            </div>
+            <p class="relative z-10 font-mono text-[11px] text-slate-500 max-w-[220px] mt-1">
+              [ Drop your favorite photo here — swap this placeholder for your real hero shot ]
+            </p>
+          </div>
+
+          <div class="mt-4 pt-3 border-t-2 border-dashed border-cobalt/30 text-center">
+            <div class="font-display font-bold text-slate-900 text-xl">Mariel Fang</div>
+            <div class="font-mono text-xs text-cobalt font-semibold mt-0.5">Information Systems · BINUS University</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Hook headline, stats, CTA, socials -->
+      <div class="lg:col-span-7 order-2 lg:order-2 space-y-6">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cobalt-faint border border-cobalt text-cobalt font-mono text-xs font-bold tracking-wide">
+          <span class="w-2 h-2 rounded-full bg-cobalt"></span>
+          BUILDER MODE: ON · JAKARTA / SYDNEY
+        </div>
+
+        <h1 class="font-display font-extrabold text-4xl sm:text-6xl text-slate-950 tracking-tight leading-[1.08]">
+          Hi, I'm Mariel —
+          <span class="text-cobalt underline decoration-wavy decoration-cobalt/40 underline-offset-8">endlessly curious</span>
+          about tech &amp; business.
+        </h1>
+
+        <p class="text-base sm:text-lg text-slate-700 leading-relaxed font-body max-w-xl">
+          Give me a cloud architecture diagram in one hand and a business case brief in the other, and I'm genuinely happy. I like figuring out how things work, then making them work <em>better</em> — for people, not just for the spec sheet.
+        </p>
+
+        <!-- Stats row: projects / experience / things done -->
+        <div class="grid grid-cols-3 gap-3 max-w-md">
+          <div class="stat-tile">
+            <div class="font-display font-extrabold text-2xl sm:text-3xl text-cobalt">4+</div>
+            <div class="font-mono text-[10px] uppercase tracking-wide text-slate-500 mt-1">Projects Shipped</div>
+          </div>
+          <div class="stat-tile">
+            <div class="font-display font-extrabold text-2xl sm:text-3xl text-cobalt">3</div>
+            <div class="font-mono text-[10px] uppercase tracking-wide text-slate-500 mt-1">Years In Motion</div>
+          </div>
+          <div class="stat-tile">
+            <div class="font-display font-extrabold text-2xl sm:text-3xl text-cobalt">6x</div>
+            <div class="font-mono text-[10px] uppercase tracking-wide text-slate-500 mt-1">On Stage as MC</div>
+          </div>
+        </div>
+
+        <!-- CTA: Download CV + quick jumps -->
+        <div class="flex flex-wrap gap-3 items-center pt-1">
+          <!-- TODO: point this at your real CV file, e.g. assets/cv/Mariel-Fang-CV.pdf -->
+          <a class="inline-flex items-center gap-2 px-5 py-2.5 rounded font-mono text-xs font-bold uppercase bg-cobalt text-white border-2 border-cobalt shadow-blueprint hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all" href="assets/cv/Mariel-Fang-CV.pdf" download>
+            <span class="material-symbols-outlined text-sm">download</span> Download CV
+          </a>
+          <a class="inline-flex items-center gap-2 px-5 py-2.5 rounded font-mono text-xs font-bold uppercase bg-white text-cobalt border-2 border-cobalt shadow-blueprint hover:bg-cobalt-faint transition-all" href="#work">
+            Explore the Work <span>→</span>
+          </a>
+        </div>
+
+        <!-- Social row -->
+        <div class="flex items-center gap-3 pt-2">
+          <span class="font-mono text-[11px] text-slate-500 uppercase tracking-wider">Find me:</span>
+          <a class="social-icon-btn" href="mailto:fangmariel503@gmail.com" title="Email">
+            <span class="material-symbols-outlined text-base">mail</span>
+          </a>
+          <a class="social-icon-btn" href="tel:+6282128585145" title="Phone">
+            <span class="material-symbols-outlined text-base">call</span>
+          </a>
+          <a class="social-icon-btn" href="https://www.linkedin.com/in/mariel-fang-a05482319/" rel="noopener" target="_blank" title="LinkedIn">
+            <span class="font-mono font-bold text-xs">in</span>
+          </a>
+          <!-- TODO: add your Instagram / other handles here, same markup -->
+          <a class="social-icon-btn opacity-40" href="#" title="Add your Instagram link">
+            <span class="material-symbols-outlined text-base">photo_camera</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== ABOUT / PAGE 2 — WHO I AM ======================== -->
+  <section class="space-y-10 scroll-mt-24" id="about">
+    <div class="border-b-2 border-cobalt pb-4 flex flex-col md:flex-row md:items-end justify-between gap-4">
+      <div>
+        <div class="font-mono text-xs font-bold text-cobalt uppercase tracking-widest flex items-center gap-2">
+          <span>● SECTION 01</span><span>//</span><span>THE PERSON BEHIND THE SPEC SHEET</span>
+        </div>
+        <h2 class="font-display font-extrabold text-3xl sm:text-5xl text-slate-950 tracking-tight mt-1">
+          A little about me.
+        </h2>
+      </div>
+      <p class="font-mono text-xs sm:text-sm text-slate-600 max-w-md">
+        The non-blueprint version — curiosity, growth mindset, and a soft spot for good design.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+      <!-- Bio -->
+      <div class="lg:col-span-7 space-y-6">
+        <div class="p-6 rounded-xl bg-white border-2 border-cobalt shadow-blueprint relative">
+          <div class="absolute -top-3 left-4 px-2 py-0.5 bg-cobalt text-white font-mono text-[10px] uppercase font-bold tracking-widest rounded">
+            CORE PHILOSOPHY
+          </div>
+          <p class="text-base sm:text-lg text-slate-800 leading-relaxed font-body">
+            I'm equal parts curious and empathetic — the kind of person who asks "wait, why does it work like that?" way too often. I'm a firm believer in the growth mindset: keep learning, keep adapting, and treat every curveball as a chance to level up.
+          </p>
+          <p class="mt-4 text-base sm:text-lg text-slate-800 leading-relaxed font-body">
+            For me, good work always starts with understanding people first. That's why I try to balance structured, logical thinking with a healthy dose of creative intuition — and no matter what I'm working on, I show up wanting to do it <em>properly</em>, not just done.
+          </p>
+        </div>
+
+        <!-- Peminatan / Interests -->
+        <div class="space-y-2">
+          <div class="font-mono text-xs text-slate-500 uppercase tracking-widest font-semibold">
+            WHAT I'M INTO
+          </div>
+          <div class="flex flex-wrap gap-2 pt-1">
+            <span class="px-3.5 py-1.5 rounded-md font-mono text-xs font-bold bg-white border border-cobalt text-cobalt shadow-blueprint-sm hover:bg-cobalt hover:text-white transition-all cursor-default"># Cloud Computing</span>
+            <span class="px-3.5 py-1.5 rounded-md font-mono text-xs font-bold bg-white border border-cobalt text-cobalt shadow-blueprint-sm hover:bg-cobalt hover:text-white transition-all cursor-default"># UI/UX &amp; Product Design</span>
+            <span class="px-3.5 py-1.5 rounded-md font-mono text-xs font-bold bg-white border border-cobalt text-cobalt shadow-blueprint-sm hover:bg-cobalt hover:text-white transition-all cursor-default"># Creative Media &amp; Hosting</span>
+            <span class="px-3.5 py-1.5 rounded-md font-mono text-xs font-bold bg-white border border-cobalt text-cobalt shadow-blueprint-sm hover:bg-cobalt hover:text-white transition-all cursor-default"># Business Strategy</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Skills as icon grid -->
+      <div class="lg:col-span-5 space-y-3">
+        <div class="font-mono text-xs text-slate-500 uppercase tracking-widest font-semibold">
+          TOOLS IN MY BACKPACK
+        </div>
+        <div class="grid grid-cols-3 gap-3">
+          <div class="skill-icon-tile">
+            <span class="material-symbols-outlined text-2xl text-cobalt">table_chart</span>
+            <span class="font-mono text-[11px] font-bold text-slate-800">Excel</span>
+          </div>
+          <div class="skill-icon-tile">
+            <span class="material-symbols-outlined text-2xl text-cobalt">database</span>
+            <span class="font-mono text-[11px] font-bold text-slate-800">Basic Oracle</span>
+          </div>
+          <div class="skill-icon-tile">
+            <span class="material-symbols-outlined text-2xl text-cobalt">code</span>
+            <span class="font-mono text-[11px] font-bold text-slate-800">Basic Programming</span>
+          </div>
+          <div class="skill-icon-tile">
+            <span class="material-symbols-outlined text-2xl text-cobalt">storage</span>
+            <span class="font-mono text-[11px] font-bold text-slate-800">Database</span>
+          </div>
+          <div class="skill-icon-tile">
+            <span class="material-symbols-outlined text-2xl text-cobalt">design_services</span>
+            <span class="font-mono text-[11px] font-bold text-slate-800">UI/UX</span>
+          </div>
+          <div class="skill-icon-tile opacity-50">
+            <span class="material-symbols-outlined text-2xl text-cobalt">add</span>
+            <span class="font-mono text-[11px] font-bold text-slate-800">Add more</span>
+          </div>
+        </div>
+        <!-- TODO: swap material icons for real logo images once you share assets, e.g. assets/icons/excel.png -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== EXPLORE THE WORK ======================== -->
+  <section class="space-y-10 scroll-mt-24" id="work">
+    <div class="border-b-2 border-cobalt pb-4 flex flex-col md:flex-row md:items-end justify-between gap-4">
+      <div>
+        <div class="font-mono text-xs font-bold text-cobalt uppercase tracking-widest flex items-center gap-2">
+          <span>● SECTION 02</span><span>//</span><span>PROJECT ARCHIVE &amp; CASE STUDIES</span>
+        </div>
+        <h2 class="font-display font-extrabold text-3xl sm:text-5xl text-slate-950 tracking-tight mt-1">
+          Explore the work.
+        </h2>
+      </div>
+      <p class="font-mono text-xs sm:text-sm text-slate-600 max-w-md">
+        Projects only, sorted the way competitions actually sorted them.
+      </p>
+    </div>
+
+    <!-- Category: Business Case Competition -->
+    <div class="space-y-4">
+      <div class="font-mono text-xs font-bold text-cobalt uppercase tracking-widest flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-rose-500"></span> Business Case Competition
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-5">
+        <div class="md:col-span-12 project-tile-link bg-white rounded-xl border-2 border-cobalt p-6 sm:p-7 shadow-blueprint hover:shadow-blueprint-lift transition-all relative group flex flex-col justify-between" onclick="goToProjectDetail('progressio')">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between flex-wrap gap-2">
+              <span class="font-mono text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded bg-rose-50 text-rose-700 border border-rose-300">
+                ● Business Case · PROGRESSIO
+              </span>
+              <span class="font-mono text-xs font-bold text-cobalt bg-cobalt-faint px-2 py-0.5 rounded border border-cobalt/20">
+                SEMIFINALIST
+              </span>
+            </div>
+            <h3 class="font-display font-bold text-2xl sm:text-3xl text-slate-950 group-hover:text-cobalt transition-colors">
+              Beyond the Gear
+            </h3>
+            <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+              My first-ever competition — an IP-collaboration growth strategy for outdoor brand Torch, aimed squarely at Gen Z. Nervous debut, semifinalist result, team FIRSTIMERZ.
+            </p>
+          </div>
+          <div class="pt-6 mt-6 border-t border-cobalt/20 flex items-center justify-between">
+            <div class="flex gap-2 font-mono text-[11px] text-slate-500">
+              <span class="bg-slate-100 px-2 py-0.5 rounded">#Strategy</span>
+              <span class="bg-slate-100 px-2 py-0.5 rounded">#GenZResearch</span>
+            </div>
+            <span class="font-mono text-xs font-bold text-cobalt inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+              View case details →
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Category: UI/UX Competition -->
+    <div class="space-y-4">
+      <div class="font-mono text-xs font-bold text-cobalt uppercase tracking-widest flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-emerald-500"></span> UI/UX Competition
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+
+        <!-- TITU -->
+        <div class="project-tile-link bg-white rounded-xl border-2 border-cobalt p-6 shadow-blueprint hover:shadow-blueprint-lift transition-all relative group flex flex-col justify-between" onclick="goToProjectDetail('titu')">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between flex-wrap gap-2">
+              <span class="font-mono text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded bg-emerald-50 text-emerald-700 border border-emerald-300">
+                ● IOFEST 2026
+              </span>
+              <span class="font-mono text-xs font-bold text-cobalt bg-cobalt-faint px-2 py-0.5 rounded border border-cobalt/20">
+                FINALIST
+              </span>
+            </div>
+            <h3 class="font-display font-bold text-xl sm:text-2xl text-slate-950 group-hover:text-cobalt transition-colors">
+              TITU
+            </h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              A Jakarta transit app that turns your commute into city-building. CO₂ savings become in-game currency, wrapped in Apple-inspired glassmorphism.
+            </p>
+          </div>
+          <div class="pt-5 mt-5 border-t border-cobalt/20 flex items-center justify-between">
+            <span class="bg-slate-100 px-2 py-0.5 rounded font-mono text-[11px] text-slate-500">#CivicTech</span>
+            <span class="font-mono text-xs font-bold text-cobalt inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">View →</span>
+          </div>
+        </div>
+
+        <!-- Un-Loop -->
+        <div class="project-tile-link bg-white rounded-xl border-2 border-cobalt p-6 shadow-blueprint hover:shadow-blueprint-lift transition-all relative group flex flex-col justify-between" onclick="goToProjectDetail('unloop')">
+          <div class="space-y-3">
+            <span class="font-mono text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded bg-purple-50 text-purple-700 border border-purple-300">
+              ● Product Design
+            </span>
+            <h3 class="font-display font-bold text-xl sm:text-2xl text-slate-950 group-hover:text-cobalt transition-colors">
+              Un-Loop
+            </h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              A gamified parental-control app that fights doomscrolling without turning into a nagging app. 18+ screens, two very different users, one Figma file.
+            </p>
+          </div>
+          <div class="pt-5 mt-5 border-t border-cobalt/20 flex items-center justify-between">
+            <span class="bg-slate-100 px-2 py-0.5 rounded font-mono text-[11px] text-slate-500">#ProductDesign</span>
+            <span class="font-mono text-xs font-bold text-cobalt inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">View →</span>
+          </div>
+        </div>
+
+        <!-- WISE (placeholder — needs real details from Mariel) -->
+        <div class="project-tile-link bg-white rounded-xl border-2 border-dashed border-cobalt/60 p-6 shadow-blueprint hover:shadow-blueprint-lift transition-all relative group flex flex-col justify-between" onclick="goToProjectDetail('wise')">
+          <div class="space-y-3">
+            <span class="font-mono text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded bg-blue-50 text-blue-700 border border-blue-300">
+              ● UI/UX Competition
+            </span>
+            <h3 class="font-display font-bold text-xl sm:text-2xl text-slate-950 group-hover:text-cobalt transition-colors">
+              WISE
+            </h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              [ Placeholder — tell Kiro what WISE is about and this card + its detail section below will be filled in properly. ]
+            </p>
+          </div>
+          <div class="pt-5 mt-5 border-t border-cobalt/20 flex items-center justify-between">
+            <span class="bg-slate-100 px-2 py-0.5 rounded font-mono text-[11px] text-slate-500">#NeedsDetails</span>
+            <span class="font-mono text-xs font-bold text-cobalt inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">View →</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== PROJECT DETAILS BREAKDOWN ==================== -->
+    <div class="pt-8 space-y-16">
+
+      <!-- PROJECT 1: PROGRESSIO / BEYOND THE GEAR -->
+      <div class="bg-white rounded-2xl border-2 border-cobalt p-6 sm:p-10 shadow-blueprint scroll-mt-24" id="progressio">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          <div class="lg:col-span-5 space-y-3">
+            <div class="aspect-[4/3] rounded-xl border-2 border-cobalt bg-gradient-to-br from-cobalt-faint via-white to-blue-100/50 p-6 flex flex-col items-center justify-center text-center relative overflow-hidden group">
+              <div class="absolute inset-0 bg-[radial-gradient(#1a4ee8_1px,transparent_1px)] [background-size:16px_16px] opacity-20"></div>
+              <div class="absolute top-3 left-3 font-mono text-[10px] uppercase font-bold px-2 py-0.5 rounded bg-cobalt text-white">PROJECT SPEC: BTG-01</div>
+              <div class="seal-circle w-24 h-24 text-[10px] text-rose-600 border-2 border-rose-600 rotate-[-12deg] bg-white/80 shadow-sm mb-2">SEMIFINALIST<br/>PROGRESSIO<br/>2025</div>
+              <div class="relative z-10 font-display font-bold text-slate-800 text-lg">Business Case Deck Excerpt</div>
+              <p class="relative z-10 font-mono text-xs text-slate-500 max-w-[240px] mt-1">"Beyond the Gear: Dominating the Urban Movement" — proposed by team FIRSTIMERZ</p>
+            </div>
+            <div class="font-mono text-xs text-slate-500 bg-cobalt-faint/60 p-2.5 rounded border border-cobalt/20">
+              <span class="text-cobalt font-bold">Caption:</span> Proposed by team FIRSTIMERZ for PROGRESSIO
+            </div>
+          </div>
+
+          <div class="lg:col-span-7 space-y-5">
+            <div class="space-y-2">
+              <div class="font-mono text-xs font-bold text-cobalt tracking-wide uppercase">Business Case Competition · Semifinalist</div>
+              <h3 class="font-display font-extrabold text-3xl sm:text-4xl text-slate-950">Beyond the Gear</h3>
+              <div class="flex flex-wrap gap-2 pt-1 font-mono text-xs">
+                <span class="px-2.5 py-1 rounded bg-slate-100 border border-slate-300 text-slate-700">Group project</span>
+                <span class="px-2.5 py-1 rounded bg-rose-50 border border-rose-300 text-rose-700 font-bold">PROGRESSIO · Semifinalist</span>
+                <span class="px-2.5 py-1 rounded bg-slate-100 border border-slate-300 text-slate-700">First-ever competition</span>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-lg bg-cobalt-faint/30 border border-cobalt/20">
+              <h5 class="font-mono text-xs font-bold text-cobalt uppercase tracking-wider mb-1">The gist</h5>
+              <p class="text-slate-800 text-sm leading-relaxed">
+                We pitched a growth strategy for Torch, an urban gear brand, built around one idea: Gen Z doesn't just buy backpacks, they buy identity. So we proposed turning functional bags and accessories into identity-driven pieces through high-affinity IP collaborations.
+              </p>
+            </div>
+
+            <div>
+              <h5 class="font-mono text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">My role</h5>
+              <p class="text-slate-700 text-sm leading-relaxed">
+                This was my very first competition ever, entered with team FIRSTIMERZ at the campus level. I dove into market and consumer research — digging into how Gen Z purchasing behavior actually responds to collab products — and helped shape the business logic and storyline behind the case.
+              </p>
+            </div>
+
+            <div>
+              <h5 class="font-mono text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">The challenge</h5>
+              <p class="text-slate-700 text-sm leading-relaxed">
+                Torch needed to stand out in a crowded urban-gear market and win over a generation that buys identity as much as utility. Our brief: design a product and marketing strategy that could make that shift feel believable, not gimmicky.
+              </p>
+            </div>
+
+            <div>
+              <h5 class="font-mono text-xs font-bold text-slate-500 uppercase tracking-wider mb-1.5">What we proposed</h5>
+              <ul class="space-y-1.5 text-sm text-slate-700 list-none pl-0 font-body">
+                <li class="flex items-start gap-2"><span class="font-mono text-cobalt font-bold text-xs mt-0.5">●</span><span>An "Active, Integrate, Reliable" (A.I.R.) brand strategy — repositioning Torch from utility gear to an identity platform</span></li>
+                <li class="flex items-start gap-2"><span class="font-mono text-cobalt font-bold text-xs mt-0.5">●</span><span>Three IP-collaboration product lines, each paired with its own user archetype and story hook</span></li>
+                <li class="flex items-start gap-2"><span class="font-mono text-cobalt font-bold text-xs mt-0.5">●</span><span>A go-to-market and feasibility case backed by measurable lifetime-value and demand targets</span></li>
+              </ul>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+              <div class="p-3.5 rounded-lg border border-slate-200 bg-white">
+                <h5 class="font-mono text-xs font-bold text-cobalt uppercase mb-1">Impact</h5>
+                <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">We made it to the semifinalist round — a solid result for a first-ever competition, and proof that the research-driven approach we took actually held up under judging.</p>
+              </div>
+              <div class="p-3.5 rounded-lg border border-slate-200 bg-white">
+                <h5 class="font-mono text-xs font-bold text-cobalt uppercase mb-1">What I learned</h5>
+                <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">This was my first real taste of business case competitions — and my first time dropping into a brand-new team on the fly. It taught me how to turn messy, open-ended consumer research into a tight, defensible business argument, a skill I've leaned on in every case study since.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECT 2: TITU -->
+      <div class="bg-white rounded-2xl border-2 border-cobalt p-6 sm:p-10 shadow-blueprint scroll-mt-24" id="titu">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          <div class="lg:col-span-5 space-y-3 lg:order-2">
+            <div class="aspect-[4/3] rounded-xl border-2 border-cobalt bg-gradient-to-br from-emerald-50 via-white to-blue-50 p-6 flex flex-col items-center justify-center text-center relative overflow-hidden group">
+              <div class="absolute inset-0 bg-[radial-gradient(#1a4ee8_1px,transparent_1px)] [background-size:16px_16px] opacity-20"></div>
+              <div class="absolute top-3 left-3 font-mono text-[10px] uppercase font-bold px-2 py-0.5 rounded bg-emerald-600 text-white">CIVIC TECH CONCEPT</div>
+              <div class="seal-circle w-24 h-24 text-[10px] text-emerald-700 border-2 border-emerald-600 rotate-[8deg] bg-white/90 shadow-sm mb-2">IOFEST 2026<br/>PROPOSAL<br/>FINALIST</div>
+              <div class="relative z-10 font-display font-bold text-slate-800 text-lg">App Screenshot / Poster</div>
+              <p class="relative z-10 font-mono text-xs text-slate-500 max-w-[240px] mt-1">TITU — proposed by team "Naat Dulu" for IOFEST, BINUS University Jakarta 2026</p>
+            </div>
+            <div class="font-mono text-xs text-slate-500 bg-cobalt-faint/60 p-2.5 rounded border border-cobalt/20">
+              <span class="text-cobalt font-bold">Caption:</span> TITU — proposed by team "Naat Dulu" for IOFEST, BINUS University Jakarta 2026
+            </div>
+          </div>
+
+          <div class="lg:col-span-7 space-y-5 lg:order-1">
+            <div class="space-y-2">
+              <div class="font-mono text-xs font-bold text-cobalt tracking-wide uppercase">Good Governance &amp; Civic Tech</div>
+              <h3 class="font-display font-extrabold text-3xl sm:text-4xl text-slate-950">TITU — Play your city, own your track.</h3>
+              <div class="flex flex-wrap gap-2 pt-1 font-mono text-xs">
+                <span class="px-2.5 py-1 rounded bg-slate-100 border border-slate-300 text-slate-700">Group project</span>
+                <span class="px-2.5 py-1 rounded bg-emerald-50 border border-emerald-300 text-emerald-800 font-bold">IOFEST Competition · Participant</span>
+                <span class="px-2.5 py-1 rounded bg-slate-100 border border-slate-300 text-slate-700">IS Case Study Club</span>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-lg bg-emerald-50/50 border border-emerald-200">
+              <h5 class="font-mono text-xs font-bold text-emerald-800 uppercase tracking-wider mb-1">The gist</h5>
+              <p class="text-slate-800 text-sm leading-relaxed">
+                TITU turns everyday Jakarta commuters on TransJakarta into city-builders — every ride feeds real CO₂ savings into a game where they build and grow their own miniature city. Yes, your commute can finally feel like it's doing something.
+              </p>
+            </div>
+
+            <div>
+              <h5 class="font-mono text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">My role</h5>
+              <p class="text-slate-700 text-sm leading-relaxed">
+                Built with two classmates for IOFEST, guided by the Information System Case Study Club. I owned the concept and UI direction — shaping the Apple-inspired glassmorphism interface, designing the isometric pixel-art city assets, and helping turn "commuting = city-building" into an actual working prototype instead of just a nice slide.
+              </p>
+            </div>
+
+            <div>
+              <h5 class="font-mono text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">The problem</h5>
+              <p class="text-slate-700 text-sm leading-relaxed">
+                Millions of people ride TransJakarta daily, but almost none of them can see how much carbon they're saving by choosing public transit over a private vehicle. We wanted to make that invisible impact visible — and genuinely rewarding, not just a stat buried in an app.
+              </p>
+            </div>
+
+            <div>
+              <h5 class="font-mono text-xs font-bold text-slate-500 uppercase tracking-wider mb-1.5">What we built</h5>
+              <ul class="space-y-1.5 text-sm text-slate-700 list-none pl-0 font-body">
+                <li class="flex items-start gap-2"><span class="font-mono text-emerald-600 font-bold text-xs mt-0.5">●</span><span>A CO₂-tracking engine that converts real commuting data into in-game currency</span></li>
+                <li class="flex items-start gap-2"><span class="font-mono text-emerald-600 font-bold text-xs mt-0.5">●</span><span>A city-building layer where that currency unlocks buildings, missions, and levels</span></li>
+                <li class="flex items-start gap-2"><span class="font-mono text-emerald-600 font-bold text-xs mt-0.5">●</span><span>An Apple-inspired glassmorphism visual language across onboarding, check-in, and tracking screens</span></li>
+                <li class="flex items-start gap-2"><span class="font-mono text-emerald-600 font-bold text-xs mt-0.5">●</span><span>Custom isometric pixel-art buildings and a full interactive prototype, packaged into our competition proposal</span></li>
+              </ul>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+              <div class="p-3.5 rounded-lg border border-slate-200 bg-white">
+                <h5 class="font-mono text-xs font-bold text-emerald-700 uppercase mb-1">Impact</h5>
+                <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">TITU went in as our full IOFEST proposal — a complete, interactive concept for making sustainable commuting fun, built end-to-end within the competition timeline.</p>
+              </div>
+              <div class="p-3.5 rounded-lg border border-slate-200 bg-white">
+                <h5 class="font-mono text-xs font-bold text-emerald-700 uppercase mb-1">What I learned</h5>
+                <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">My second competition, and the one that taught me how much a clear timeline actually matters. We hit a genuinely chaotic time crunch mid-project — pushing through it taught me to lock down the idea and visual direction early, instead of letting both drift toward the deadline.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECT 3: UN-LOOP -->
+      <div class="bg-white rounded-2xl border-2 border-cobalt p-6 sm:p-10 shadow-blueprint scroll-mt-24" id="unloop">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          <div class="lg:col-span-5 space-y-3">
+            <div class="aspect-[4/3] rounded-xl border-2 border-cobalt bg-gradient-to-br from-purple-50 via-white to-blue-50 p-6 flex flex-col items-center justify-center text-center relative overflow-hidden group">
+              <div class="absolute inset-0 bg-[radial-gradient(#1a4ee8_1px,transparent_1px)] [background-size:16px_16px] opacity-20"></div>
+              <div class="absolute top-3 left-3 font-mono text-[10px] uppercase font-bold px-2 py-0.5 rounded bg-purple-700 text-white">PRODUCT &amp; FIGMA PROTOTYPE</div>
+              <div class="seal-circle w-24 h-24 text-[10px] text-purple-700 border-2 border-purple-600 rotate-[-8deg] bg-white/90 shadow-sm mb-2">18+ SCREENS<br/>DUAL MODE<br/>UX AUDIT</div>
+              <div class="relative z-10 font-display font-bold text-slate-800 text-lg">App Screenshot</div>
+              <p class="relative z-10 font-mono text-xs text-slate-500 max-w-[240px] mt-1">Un-Loop — Figma prototype</p>
+            </div>
+            <div class="font-mono text-xs text-slate-500 bg-cobalt-faint/60 p-2.5 rounded border border-cobalt/20">
+              <span class="text-cobalt font-bold">Caption:</span> Un-Loop — Figma prototype
+            </div>
+          </div>
+
+          <div class="lg:col-span-7 space-y-5">
+            <div class="space-y-2">
+              <div class="font-mono text-xs font-bold text-cobalt tracking-wide uppercase">Gamified Parental Control App</div>
+              <h3 class="font-display font-extrabold text-3xl sm:text-4xl text-slate-950">Un-Loop</h3>
+              <div class="flex flex-wrap gap-2 pt-1 font-mono text-xs">
+                <span class="px-2.5 py-1 rounded bg-slate-100 border border-slate-300 text-slate-700">Self-initiated / class project</span>
+                <span class="px-2.5 py-1 rounded bg-purple-50 border border-purple-300 text-purple-800 font-bold">UI/UX &amp; Product Design</span>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-lg bg-purple-50/50 border border-purple-200">
+              <h5 class="font-mono text-xs font-bold text-purple-800 uppercase tracking-wider mb-1">The gist</h5>
+              <p class="text-slate-800 text-sm leading-relaxed">
+                Un-Loop tackles doomscrolling among Indonesian teens by turning healthier screen habits into a game both kids and parents actually want to play — not another app that just locks the phone and starts a fight.
+              </p>
+            </div>
+
+            <div>
+              <h5 class="font-mono text-xs font-bold text-slate-500 uppercase tracking-wider mb-1.5">What I built</h5>
+              <ul class="space-y-1.5 text-sm text-slate-700 list-none pl-0 font-body">
+                <li class="flex items-start gap-2"><span class="font-mono text-purple-600 font-bold text-xs mt-0.5">●</span><span>A 20-slide pitch deck built around a freemium business model</span></li>
+                <li class="flex items-start gap-2"><span class="font-mono text-purple-600 font-bold text-xs mt-0.5">●</span><span>A full Figma prototype spanning 18+ screens across Pre-Auth, Self, Kid, and Parent Mode flows</span></li>
+                <li class="flex items-start gap-2"><span class="font-mono text-purple-600 font-bold text-xs mt-0.5">●</span><span>A screen-by-screen UX audit to close experience gaps before final delivery</span></li>
+              </ul>
+            </div>
+
+            <div class="p-4 rounded-lg border border-slate-200 bg-white">
+              <h5 class="font-mono text-xs font-bold text-cobalt uppercase mb-1">What I learned</h5>
+              <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                Designing for two very different users at once — a teen who wants autonomy and a parent who wants visibility — pushed me to think harder about permissions, tone, and trust inside one product, instead of designing a single flow and copy-pasting it twice.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECT 4: WISE (placeholder detail) -->
+      <div class="bg-white rounded-2xl border-2 border-dashed border-cobalt/60 p-6 sm:p-10 shadow-blueprint scroll-mt-24" id="wise">
+        <div class="space-y-3">
+          <div class="font-mono text-xs font-bold text-cobalt tracking-wide uppercase">UI/UX Competition</div>
+          <h3 class="font-display font-extrabold text-3xl sm:text-4xl text-slate-950">WISE</h3>
+          <div class="p-4 rounded-lg bg-blue-50/50 border border-blue-200">
+            <p class="text-slate-800 text-sm leading-relaxed">
+              This section is a placeholder. Tell Kiro the competition name, your role, the problem WISE solves, what you built, and what you learned — and this whole block will be rewritten to match the style of your other projects.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== EXPERIENCE TIMELINE (kept as-is, confirmed fine) ======================== -->
+  <section class="space-y-10 scroll-mt-24" id="experience">
+    <div class="border-b-2 border-cobalt pb-4 flex flex-col md:flex-row md:items-end justify-between gap-4">
+      <div>
+        <div class="font-mono text-xs font-bold text-cobalt uppercase tracking-widest flex items-center gap-2">
+          <span>● SECTION 03</span><span>//</span><span>CHRONOLOGICAL WORK LOG</span>
+        </div>
+        <h2 class="font-display font-extrabold text-3xl sm:text-5xl text-slate-950 tracking-tight mt-1">
+          Experience.
+        </h2>
+      </div>
+      <p class="font-mono text-xs sm:text-sm text-slate-600 max-w-md">
+        Where I've worked, and what each place taught me that I didn't expect.
+      </p>
+    </div>
+
+    <div class="relative border-l-2 border-cobalt pl-6 sm:pl-8 ml-2 sm:ml-4 space-y-12">
+
+      <!-- ITEM 1: BINUS Promotion Team -->
+      <div class="relative space-y-4">
+        <div class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-white border-4 border-cobalt shadow-sm"></div>
+        <div class="flex flex-wrap items-center gap-3">
+          <span class="font-mono text-xs font-bold px-2.5 py-0.5 rounded bg-cobalt text-white">2024 – Present</span>
+          <span class="font-mono text-xs text-slate-500 font-semibold tracking-wider uppercase">CAMPUS AMBASSADOR &amp; BROADCAST</span>
+        </div>
+        <div class="bg-white rounded-xl border-2 border-cobalt p-6 shadow-blueprint space-y-4">
+          <div>
+            <h4 class="font-display font-bold text-2xl text-slate-950">BINUS University Promotion Team</h4>
+            <p class="font-mono text-xs sm:text-sm font-semibold text-cobalt mt-0.5">Event &amp; Promotion Team Member</p>
+          </div>
+          <p class="text-sm sm:text-base text-slate-700 leading-relaxed">
+            I represent the university at promotional events and expos — hosting TikTok Live sessions on scholarships and campus life, then switching hats to design the visual marketing content that supports it all.
+          </p>
+          <ul class="space-y-1.5 text-sm text-slate-700 font-body list-none pl-0">
+            <li class="flex items-start gap-2"><span class="font-mono text-cobalt font-bold text-xs mt-0.5">●</span><span>Learned BINUS's full scholarship and program lineup well enough to explain it live, on the spot, to prospective students</span></li>
+            <li class="flex items-start gap-2"><span class="font-mono text-cobalt font-bold text-xs mt-0.5">●</span><span>Handled real-time crowd interaction at expos — answering questions, reading the room, adjusting the pitch on the fly</span></li>
+            <li class="flex items-start gap-2"><span class="font-mono text-cobalt font-bold text-xs mt-0.5">●</span><span>Juggled two roles at once: on-camera host and behind-the-scenes designer</span></li>
+          </ul>
+
+          <div class="pt-3 border-t border-cobalt/20">
+            <div class="font-mono text-[11px] text-slate-500 uppercase font-bold tracking-wider mb-3">DOCUMENTATION LOG // 3 ARTIFACTS</div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <div class="rounded-lg border-1.5 border-cobalt bg-paper p-3 border shadow-blueprint-sm hover:shadow-none hover:translate-x-0.5 hover:translate-y-0.5 transition-all">
+                <div class="aspect-[16/10] rounded bg-white border border-cobalt/30 flex flex-col items-center justify-center p-2 text-center mb-2.5">
+                  <span class="material-symbols-outlined text-cobalt text-2xl mb-1">smart_display</span>
+                  <span class="font-mono text-[9px] font-bold text-cobalt uppercase tracking-wider">LIVE HOSTING</span>
+                </div>
+                <h5 class="font-display font-bold text-xs text-slate-900">TikTok Live Broadcasting</h5>
+                <p class="font-body text-[11px] text-slate-600 mt-1 leading-snug">Interactive scholarship sessions &amp; real-time Q&amp;A with prospective students.</p>
+              </div>
+              <div class="rounded-lg border-1.5 border-cobalt bg-paper p-3 border shadow-blueprint-sm hover:shadow-none hover:translate-x-0.5 hover:translate-y-0.5 transition-all">
+                <div class="aspect-[16/10] rounded bg-white border border-cobalt/30 flex flex-col items-center justify-center p-2 text-center mb-2.5">
+                  <span class="material-symbols-outlined text-cobalt text-2xl mb-1">storefront</span>
+                  <span class="font-mono text-[9px] font-bold text-cobalt uppercase tracking-wider">EVENT BOOTH</span>
+                </div>
+                <h5 class="font-display font-bold text-xs text-slate-900">Expo &amp; Education Fair</h5>
+                <p class="font-body text-[11px] text-slate-600 mt-1 leading-snug">On-site campus consultation booth documentation and visitor engagement.</p>
+              </div>
+              <div class="rounded-lg border-1.5 border-cobalt bg-paper p-3 border shadow-blueprint-sm hover:shadow-none hover:translate-x-0.5 hover:translate-y-0.5 transition-all">
+                <div class="aspect-[16/10] rounded bg-white border border-cobalt/30 flex flex-col items-center justify-center p-2 text-center mb-2.5">
+                  <span class="material-symbols-outlined text-cobalt text-2xl mb-1">campaign</span>
+                  <span class="font-mono text-[9px] font-bold text-cobalt uppercase tracking-wider">ROADSHOW</span>
+                </div>
+                <h5 class="font-display font-bold text-xs text-slate-900">Campus Ambassador Roadshow</h5>
+                <p class="font-body text-[11px] text-slate-600 mt-1 leading-snug">On-site admissions consultation, live Q&amp;A sessions, and high-school outreach expo representation.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ITEM 2: IS Lab BINUS -->
+      <div class="relative space-y-4">
+        <div class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-white border-4 border-cobalt shadow-sm"></div>
+        <div class="flex flex-wrap items-center gap-3">
+          <span class="font-mono text-xs font-bold px-2.5 py-0.5 rounded bg-cobalt text-white">2025 – Present</span>
+          <span class="font-mono text-xs text-slate-500 font-semibold tracking-wider uppercase">ACADEMIC TEACHING &amp; LAB ASSISTANCE</span>
+        </div>
+        <div class="bg-white rounded-xl border-2 border-cobalt p-6 shadow-blueprint space-y-4">
+          <div>
+            <h4 class="font-display font-bold text-2xl text-slate-950">Information Systems Lab, BINUS University</h4>
+            <p class="font-mono text-xs sm:text-sm font-semibold text-cobalt mt-0.5">Part-Time Laboratory Assistant</p>
+          </div>
+          <p class="text-sm sm:text-base text-slate-700 leading-relaxed">
+            I support lab operations and help classmates through Information Systems practicals and assignments — part tech support, part patient explainer.
+          </p>
+          <div class="pt-3 border-t border-cobalt/20">
+            <div class="font-mono text-[11px] text-slate-500 uppercase font-bold tracking-wider mb-3">LAB GUIDANCE ARTIFACTS</div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-xl">
+              <div class="rounded-lg border-1.5 border-cobalt bg-paper p-3 border shadow-blueprint-sm">
+                <div class="aspect-[16/9] rounded bg-white border border-cobalt/30 flex flex-col items-center justify-center p-2 text-center mb-2.5">
+                  <span class="material-symbols-outlined text-cobalt text-2xl mb-1">terminal</span>
+                  <span class="font-mono text-[9px] font-bold text-cobalt uppercase tracking-wider">PRACTICUM</span>
+                </div>
+                <h5 class="font-display font-bold text-xs text-slate-900">Laboratory Practical Session</h5>
+                <p class="font-body text-[11px] text-slate-600 mt-1 leading-snug">Technical demonstration &amp; supervising hands-on database and systems classes.</p>
+              </div>
+              <div class="rounded-lg border-1.5 border-cobalt bg-paper p-3 border shadow-blueprint-sm">
+                <div class="aspect-[16/9] rounded bg-white border border-cobalt/30 flex flex-col items-center justify-center p-2 text-center mb-2.5">
+                  <span class="material-symbols-outlined text-cobalt text-2xl mb-1">groups</span>
+                  <span class="font-mono text-[9px] font-bold text-cobalt uppercase tracking-wider">MENTORING</span>
+                </div>
+                <h5 class="font-display font-bold text-xs text-slate-900">Computer Lab Mentoring</h5>
+                <p class="font-body text-[11px] text-slate-600 mt-1 leading-snug">1-on-1 student troubleshooting for programming logic and system assignments.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ITEM 3: McDonald's Broadway, Sydney -->
+      <div class="relative space-y-4">
+        <div class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-white border-4 border-cobalt shadow-sm"></div>
+        <div class="flex flex-wrap items-center gap-3">
+          <span class="font-mono text-xs font-bold px-2.5 py-0.5 rounded bg-slate-200 text-slate-800">2023 – 2024</span>
+          <span class="font-mono text-xs text-slate-500 font-semibold tracking-wider uppercase">INTERNATIONAL OPERATIONS · SYDNEY, AUSTRALIA</span>
+        </div>
+        <div class="bg-white rounded-xl border-2 border-cobalt p-5 sm:p-6 shadow-blueprint space-y-2">
+          <h4 class="font-display font-bold text-xl text-slate-950">McDonald's Broadway, Sydney</h4>
+          <p class="font-mono text-xs sm:text-sm font-semibold text-cobalt">McCafe Barista &amp; Crew Member</p>
+          <p class="text-sm text-slate-700 leading-relaxed pt-1">
+            Worked front-of-house, café, and inventory logistics in a fast-paced, genuinely international team — great training for staying calm under pressure.
+          </p>
+        </div>
+      </div>
+
+      <!-- ITEM 4: PT Kingled Indonesia -->
+      <div class="relative space-y-4">
+        <div class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-white border-4 border-cobalt shadow-sm"></div>
+        <div class="flex flex-wrap items-center gap-3">
+          <span class="font-mono text-xs font-bold px-2.5 py-0.5 rounded bg-slate-200 text-slate-800">2023</span>
+          <span class="font-mono text-xs text-slate-500 font-semibold tracking-wider uppercase">CORPORATE INTERNSHIP</span>
+        </div>
+        <div class="bg-white rounded-xl border-2 border-cobalt p-5 sm:p-6 shadow-blueprint space-y-2">
+          <h4 class="font-display font-bold text-xl text-slate-950">PT. Kingled Indonesia</h4>
+          <p class="font-mono text-xs sm:text-sm font-semibold text-cobalt">Human Resources Intern</p>
+          <p class="text-sm text-slate-700 leading-relaxed pt-1">
+            Supported recruitment and first-round interviews, and planned employee bonding activities to keep team culture alive.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== LEADERSHIP & ORGANIZATIONS ======================== -->
+  <section class="space-y-10 scroll-mt-24" id="leadership">
+    <div class="border-b-2 border-cobalt pb-4 flex flex-col md:flex-row md:items-end justify-between gap-4">
+      <div>
+        <div class="font-mono text-xs font-bold text-cobalt uppercase tracking-widest flex items-center gap-2">
+          <span>● SECTION 04</span><span>//</span><span>COMMUNITY &amp; DEPARTMENT IMPACT</span>
+        </div>
+        <h2 class="font-display font-extrabold text-3xl sm:text-5xl text-slate-950 tracking-tight mt-1">
+          Leadership &amp; organizations.
+        </h2>
+      </div>
+      <p class="font-mono text-xs sm:text-sm text-slate-600 max-w-md">
+        Campus involvement, curated to the highlights (and yes, the mic drops).
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      <!-- ISCSC -->
+      <div class="bg-white rounded-2xl border-2 border-cobalt p-6 sm:p-7 shadow-blueprint flex flex-col justify-between space-y-6">
+        <div class="space-y-3">
+          <div class="flex justify-between items-start gap-2">
+            <span class="font-mono text-xs font-bold px-2.5 py-1 rounded bg-blue-50 text-blue-700 border border-blue-200">Active Member · 2026 – Present</span>
+            <span class="seal-circle w-12 h-12 text-[8px] text-cobalt">ISCSC</span>
+          </div>
+          <h3 class="font-display font-bold text-2xl text-slate-950">Information System Case Study Club (ISCSC)</h3>
+          <p class="font-mono text-xs text-cobalt font-bold">Competition Prep &amp; Club Documentation</p>
+          <ul class="space-y-2 text-sm text-slate-700 list-none pl-0 font-body">
+            <li class="flex items-start gap-2"><span class="font-mono text-cobalt font-bold text-xs mt-0.5">●</span><span>Documented every club member and our weekly training sessions as we prepped for national-level competitions</span></li>
+            <li class="flex items-start gap-2"><span class="font-mono text-cobalt font-bold text-xs mt-0.5">●</span><span>Ran weekly training sessions and deep-dive discussions to sharpen members' readiness for Business Case, UI/UX, and Business Plan competitions</span></li>
+          </ul>
+        </div>
+        <div class="grid grid-cols-2 gap-3 pt-3 border-t border-cobalt/20">
+          <div class="rounded-lg border border-cobalt/40 bg-cobalt-faint/40 p-2.5 text-center">
+            <span class="material-symbols-outlined text-cobalt text-xl">group_work</span>
+            <div class="font-mono text-[10px] font-bold text-cobalt uppercase mt-1">Member Gathering</div>
+            <div class="text-[11px] text-slate-600 line-clamp-2 mt-0.5">All Members &amp; Club Gathering onboarding</div>
+          </div>
+          <div class="rounded-lg border border-cobalt/40 bg-cobalt-faint/40 p-2.5 text-center">
+            <span class="material-symbols-outlined text-cobalt text-xl">model_training</span>
+            <div class="font-mono text-[10px] font-bold text-cobalt uppercase mt-1">Weekly Training</div>
+            <div class="text-[11px] text-slate-600 line-clamp-2 mt-0.5">Case briefs &amp; UI/UX simulations</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Freshman Leader / FYP -->
+      <div class="bg-white rounded-2xl border-2 border-cobalt p-6 sm:p-7 shadow-blueprint flex flex-col justify-between space-y-6">
+        <div class="space-y-3">
+          <div class="flex justify-between items-start gap-2">
+            <span class="font-mono text-xs font-bold px-2.5 py-1 rounded bg-amber-50 text-amber-800 border border-amber-200">First Year Program B29 · 2025 – Present</span>
+            <span class="seal-circle w-12 h-12 text-[8px] text-amber-700 border-amber-700">FYP B29</span>
+          </div>
+          <h3 class="font-display font-bold text-2xl text-slate-950">Freshman Leader &amp; Partner</h3>
+          <p class="font-mono text-xs text-cobalt font-bold">Cohort Mentorship &amp; First-Year Integration</p>
+          <ul class="space-y-2 text-sm text-slate-700 list-none pl-0 font-body">
+            <li class="flex items-start gap-2"><span class="font-mono text-cobalt font-bold text-xs mt-0.5">●</span><span>Mentored new Information Systems students through orientation and that slightly overwhelming first-year transition</span></li>
+          </ul>
+        </div>
+        <div class="grid grid-cols-2 gap-3 pt-3 border-t border-cobalt/20">
+          <div class="rounded-lg border border-cobalt/40 bg-cobalt-faint/40 p-2.5 text-center">
+            <span class="material-symbols-outlined text-cobalt text-xl">celebration</span>
+            <div class="font-mono text-[10px] font-bold text-cobalt uppercase mt-1">Orientation</div>
+            <div class="text-[11px] text-slate-600 line-clamp-2 mt-0.5">FYP Welcoming &amp; Cohort Onboarding</div>
+          </div>
+          <div class="rounded-lg border border-cobalt/40 bg-cobalt-faint/40 p-2.5 text-center">
+            <span class="material-symbols-outlined text-cobalt text-xl">school</span>
+            <div class="font-mono text-[10px] font-bold text-cobalt uppercase mt-1">Buddy Sharing</div>
+            <div class="text-[11px] text-slate-600 line-clamp-2 mt-0.5">Course roadmaps &amp; adaptation tips</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- HIMSISFO — summary card, restructured -->
+      <div class="lg:col-span-2 bg-white rounded-2xl border-2 border-cobalt p-6 sm:p-9 shadow-blueprint space-y-6">
+        <div class="flex flex-wrap items-center justify-between gap-4">
+          <div>
+            <span class="font-mono text-xs font-bold px-2.5 py-1 rounded bg-cobalt text-white">2024 – 2026</span>
+            <h3 class="font-display font-bold text-2xl sm:text-3xl text-slate-950 mt-2">HIMSISFO — Commission 3: Information</h3>
+            <p class="font-mono text-xs sm:text-sm text-cobalt font-semibold">Design, Publication, Documentation &amp; Master of Ceremonies</p>
+          </div>
+          <div class="seal-circle w-20 h-20 text-[9px] text-cobalt border-2 border-cobalt hidden sm:inline-flex">COMMISSION 3<br/>MEDIA LEAD</div>
+        </div>
+
+        <div class="p-4 rounded-lg bg-cobalt-faint/40 border border-cobalt/20">
+          <h5 class="font-mono text-xs font-bold text-cobalt uppercase tracking-wider mb-1">The short version</h5>
+          <p class="text-slate-800 text-sm leading-relaxed">
+            Two years as an active member of Commission 3: Information — the crew behind design, publication, documentation, and hosting for every major department event. Basically: if an event needed to look good, be documented, or have someone hype up the crowd, there's a good chance I was involved.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="space-y-2">
+            <h5 class="font-mono text-xs font-bold text-slate-500 uppercase tracking-wider">Key Appointments &amp; Roles</h5>
+            <ul class="space-y-1.5 text-sm text-slate-700 list-none pl-0 font-body">
+              <li class="flex items-start gap-2"><span class="font-mono text-cobalt font-bold text-xs mt-0.5">●</span><span><strong>Event Advisor</strong> — HIMSISFO 2026: EXPLORIA &amp; VIBEZ</span></li>
+              <li class="flex items-start gap-2"><span class="font-mono text-cobalt font-bold text-xs mt-0.5">●</span><span><strong>Vice Coordinator, Graphic Design</strong> — Dig In HIMSISFO 2025: FUSION</span></li>
+              <li class="flex items-start gap-2"><span class="font-mono text-cobalt font-bold text-xs mt-0.5">●</span><span><strong>Vice Coordinator, Publication &amp; Documentation</strong> — Immersion HIMSISFO 2025: NEXT, a 7-day international program</span></li>
+              <li class="flex items-start gap-2"><span class="font-mono text-cobalt font-bold text-xs mt-0.5">●</span><span><strong>Master of Ceremonies</strong> — six appearances and counting (see below)</span></li>
+            </ul>
+          </div>
+          <div class="space-y-2">
+            <h5 class="font-mono text-xs font-bold text-slate-500 uppercase tracking-wider">Impact &amp; Reflections</h5>
+            <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">
+              <strong>Impact:</strong> I designed the Instagram feed and story content carrying each event's visual identity, kept publication and documentation running smoothly through a week-long international program, and hosted on stage across six HIMSISFO events.
+            </p>
+            <p class="text-xs sm:text-sm text-slate-700 leading-relaxed pt-1">
+              <strong>What I learned:</strong> This is where I discovered a skill I didn't know I had — being an MC. Two years of design work taught me consistency and visual storytelling, but stepping on stage taught me something a design brief never could: how to hold a room, think on my feet, and stay composed live, in front of an audience.
+            </p>
+          </div>
+        </div>
+
+        <!-- Button that leads to the MC roles detail grid -->
+        <div class="pt-2">
+          <button class="inline-flex items-center gap-2 px-4 py-2 rounded font-mono text-xs font-bold uppercase bg-white text-cobalt border-2 border-cobalt shadow-blueprint-sm hover:bg-cobalt hover:text-white transition-all" onclick="goToProjectDetail('himsisfo-mc-roles')">
+            See all 6 MC appearances <span>↓</span>
+          </button>
+        </div>
+
+        <!-- MC roles grid: 6 boxes -->
+        <div class="pt-4 border-t border-cobalt/20 scroll-mt-24" id="himsisfo-mc-roles">
+          <div class="font-mono text-[11px] text-slate-500 uppercase font-bold tracking-wider mb-3">MASTER OF CEREMONIES // 6 APPEARANCES</div>
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+            <div class="rounded-lg border border-cobalt/30 bg-paper p-3 text-center">
+              <span class="material-symbols-outlined text-cobalt text-2xl">mic</span>
+              <div class="font-mono text-[10px] font-bold text-cobalt uppercase mt-1">LUNAR</div>
+              <p class="text-[11px] text-slate-500 mt-1">HIMSISFO event hosting</p>
+            </div>
+            <div class="rounded-lg border border-cobalt/30 bg-paper p-3 text-center">
+              <span class="material-symbols-outlined text-cobalt text-2xl">mic</span>
+              <div class="font-mono text-[10px] font-bold text-cobalt uppercase mt-1">FILM</div>
+              <p class="text-[11px] text-slate-500 mt-1">HIMSISFO event hosting</p>
+            </div>
+            <div class="rounded-lg border border-cobalt/30 bg-paper p-3 text-center">
+              <span class="material-symbols-outlined text-cobalt text-2xl">mic</span>
+              <div class="font-mono text-[10px] font-bold text-cobalt uppercase mt-1">FUSION</div>
+              <p class="text-[11px] text-slate-500 mt-1">HIMSISFO event hosting</p>
+            </div>
+            <div class="rounded-lg border border-cobalt/30 bg-paper p-3 text-center">
+              <span class="material-symbols-outlined text-cobalt text-2xl">mic</span>
+              <div class="font-mono text-[10px] font-bold text-cobalt uppercase mt-1">PRODIGI</div>
+              <p class="text-[11px] text-slate-500 mt-1">HIMSISFO event hosting</p>
+            </div>
+            <div class="rounded-lg border border-cobalt/30 bg-paper p-3 text-center">
+              <span class="material-symbols-outlined text-cobalt text-2xl">mic</span>
+              <div class="font-mono text-[10px] font-bold text-cobalt uppercase mt-1">BALON HIMSISFO 2026: NOVA</div>
+              <p class="text-[11px] text-slate-500 mt-1">MC for the 2027/2028 chairperson election</p>
+            </div>
+            <!-- PLACEHOLDER: 6th MC event — tell Kiro which event this is -->
+            <div class="rounded-lg border border-dashed border-cobalt/50 bg-paper/60 p-3 text-center opacity-70">
+              <span class="material-symbols-outlined text-cobalt text-2xl">add_circle</span>
+              <div class="font-mono text-[10px] font-bold text-cobalt uppercase mt-1">6th event?</div>
+              <p class="text-[11px] text-slate-500 mt-1">Tell Kiro which event this is</p>
+            </div>
+          </div>
+        </div>
+
+        <p class="font-mono text-xs text-slate-400 italic">+ several additional staff and volunteer roles across 2024 – 2026</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== CERTIFICATES & CREDENTIALS ======================== -->
+  <section class="space-y-10 scroll-mt-24" id="certificates">
+    <div class="border-b-2 border-cobalt pb-4 flex flex-col md:flex-row md:items-end justify-between gap-4">
+      <div>
+        <div class="font-mono text-xs font-bold text-cobalt uppercase tracking-widest flex items-center gap-2">
+          <span>● SECTION 05</span><span>//</span><span>VERIFIED CREDENTIAL ARCHIVE</span>
+        </div>
+        <h2 class="font-display font-extrabold text-3xl sm:text-5xl text-slate-950 tracking-tight mt-1">
+          Certificates &amp; Credentials
+        </h2>
+      </div>
+      <p class="font-mono text-xs sm:text-sm text-slate-600 max-w-md">
+        Official certifications, competition honors, and leadership awards — ready for document uploads and verified scans.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- CERT 1: SIS Excellence Award -->
+      <div class="bg-white rounded-xl border-2 border-cobalt p-6 shadow-blueprint hover:shadow-blueprint-lift transition-all flex flex-col justify-between space-y-4">
+        <div class="space-y-3">
+          <div class="flex items-center justify-between font-mono text-xs">
+            <span class="px-2 py-0.5 rounded bg-blue-50 text-cobalt font-bold border border-cobalt/30">Academic &amp; Leadership</span>
+            <span class="text-slate-500">March 2025</span>
+          </div>
+          <h3 class="font-display font-bold text-xl text-slate-950">SIS Excellence Award</h3>
+          <p class="font-mono text-xs text-slate-500">School of Information Systems · BINUS University</p>
+          <div class="aspect-[1.414/1] rounded-lg border-2 border-dashed border-cobalt/40 bg-gradient-to-br from-cobalt-faint via-white to-blue-50/50 p-4 flex flex-col items-center justify-center text-center relative group">
+            <div class="w-10 h-10 rounded-full bg-white border border-cobalt flex items-center justify-center shadow-sm text-cobalt mb-2">
+              <span class="material-symbols-outlined text-xl">military_tech</span>
+            </div>
+            <div class="font-display font-bold text-xs text-slate-800">Certificate Scan Placeholder</div>
+            <p class="font-mono text-[10px] text-slate-400 mt-0.5 max-w-[200px]">Upload / Insert Certificate Image Here<br/><code class="text-cobalt">&lt;img src="..." /&gt;</code></p>
+          </div>
+          <p class="text-xs text-slate-600 leading-relaxed font-body">Recognizing exceptional academic standing, departmental leadership, and student distinction in Information Systems.</p>
+        </div>
+        <div class="pt-3 border-t border-cobalt/20 flex items-center justify-between font-mono text-xs">
+          <span class="text-[10px] text-slate-400 font-bold">BINUS-SIS-EXC-2025-0042</span>
+          <button class="px-3 py-1.5 rounded bg-cobalt text-white font-bold hover:bg-cobalt-hover transition-colors shadow-blueprint-sm" onclick="showCertViewer('SIS Excellence Award', 'School of Information Systems · BINUS University', 'BINUS-SIS-EXC-2025-0042', 'Award of Academic &amp; Leadership Excellence in Information Systems, conferred in recognition of outstanding academic distinction, campus organizational contributions, and innovative technical initiative.', 'March 2025', 'Honorary Distinction')">View Doc →</button>
+        </div>
+      </div>
+
+      <!-- CERT 2: HIMSISFO Certificate of Merit -->
+      <div class="bg-white rounded-xl border-2 border-cobalt p-6 shadow-blueprint hover:shadow-blueprint-lift transition-all flex flex-col justify-between space-y-4">
+        <div class="space-y-3">
+          <div class="flex items-center justify-between font-mono text-xs">
+            <span class="px-2 py-0.5 rounded bg-amber-50 text-amber-800 font-bold border border-amber-300">Department Merit &amp; Leadership</span>
+            <span class="text-slate-500">November 2025</span>
+          </div>
+          <h3 class="font-display font-bold text-xl text-slate-950">HIMSISFO Official Certificate of Merit</h3>
+          <p class="font-mono text-xs text-slate-500">HIMSISFO — Commission 3: Information</p>
+          <div class="aspect-[1.414/1] rounded-lg border-2 border-dashed border-amber-300 bg-gradient-to-br from-amber-50/50 via-white to-blue-50/50 p-4 flex flex-col items-center justify-center text-center relative group">
+            <div class="w-10 h-10 rounded-full bg-white border border-amber-500 flex items-center justify-center shadow-sm text-amber-700 mb-2">
+              <span class="material-symbols-outlined text-xl">workspace_premium</span>
+            </div>
+            <div class="font-display font-bold text-xs text-slate-800">Certificate Scan Placeholder</div>
+            <p class="font-mono text-[10px] text-slate-400 mt-0.5 max-w-[200px]">Upload / Insert Certificate Image Here<br/><code class="text-cobalt">&lt;img src="..." /&gt;</code></p>
+          </div>
+          <p class="text-xs text-slate-600 leading-relaxed font-body">Conferred for dedication as Master of Ceremonies, publication design leader, and coordinator across flagship events.</p>
+        </div>
+        <div class="pt-3 border-t border-cobalt/20 flex items-center justify-between font-mono text-xs">
+          <span class="text-[10px] text-slate-400 font-bold">HMS-C3-2025-018</span>
+          <button class="px-3 py-1.5 rounded bg-cobalt text-white font-bold hover:bg-cobalt-hover transition-colors shadow-blueprint-sm" onclick="showCertViewer('HIMSISFO Official Certificate of Merit &amp; Leadership', 'HIMSISFO — Commission 3: Information', 'HMS-C3-2025-018', 'Official Certificate of Merit &amp; Leadership for exemplary service as Master of Ceremonies, publication designer, and coordinator across flagship department events.', 'November 2025', 'Official Merit')">View Doc →</button>
+        </div>
+      </div>
+
+      <!-- CERT 3: PROGRESSIO Semifinalist Honor -->
+      <div class="bg-white rounded-xl border-2 border-cobalt p-6 shadow-blueprint hover:shadow-blueprint-lift transition-all flex flex-col justify-between space-y-4">
+        <div class="space-y-3">
+          <div class="flex items-center justify-between font-mono text-xs">
+            <span class="px-2 py-0.5 rounded bg-rose-50 text-rose-700 font-bold border border-rose-300">Business Case Semifinalist</span>
+            <span class="text-slate-500">October 2025</span>
+          </div>
+          <h3 class="font-display font-bold text-xl text-slate-950">PROGRESSIO Semifinalist Honor</h3>
+          <p class="font-mono text-xs text-slate-500">PROGRESSIO Competition · Team FIRSTIMERZ</p>
+          <div class="aspect-[1.414/1] rounded-lg border-2 border-dashed border-rose-300 bg-gradient-to-br from-rose-50/50 via-white to-blue-50/50 p-4 flex flex-col items-center justify-center text-center relative group">
+            <div class="w-10 h-10 rounded-full bg-white border border-rose-500 flex items-center justify-center shadow-sm text-rose-700 mb-2">
+              <span class="material-symbols-outlined text-xl">emoji_events</span>
+            </div>
+            <div class="font-display font-bold text-xs text-slate-800">Certificate Scan Placeholder</div>
+            <p class="font-mono text-[10px] text-slate-400 mt-0.5 max-w-[200px]">Upload / Insert Certificate Image Here<br/><code class="text-cobalt">&lt;img src="..." /&gt;</code></p>
+          </div>
+          <p class="text-xs text-slate-600 leading-relaxed font-body">National Business Case semifinalist honor for proposing an A.I.R. IP-collaboration growth strategy for Torch.</p>
+        </div>
+        <div class="pt-3 border-t border-cobalt/20 flex items-center justify-between font-mono text-xs">
+          <span class="text-[10px] text-slate-400 font-bold">PROG-2026-FST-119</span>
+          <button class="px-3 py-1.5 rounded bg-cobalt text-white font-bold hover:bg-cobalt-hover transition-colors shadow-blueprint-sm" onclick="showCertViewer('Semifinalist Honor Certificate', 'PROGRESSIO National Business Case Committee', 'PROG-2026-FST-119', 'National Business Case semifinalist honor for proposing an A.I.R. IP-collaboration growth strategy for urban outdoor brand Torch with team FIRSTIMERZ.', 'October 2025', 'National Semifinalist')">View Doc →</button>
+        </div>
+      </div>
+
+      <!-- CERT 4: IOFEST Finalist Award -->
+      <div class="bg-white rounded-xl border-2 border-cobalt p-6 shadow-blueprint hover:shadow-blueprint-lift transition-all flex flex-col justify-between space-y-4">
+        <div class="space-y-3">
+          <div class="flex items-center justify-between font-mono text-xs">
+            <span class="px-2 py-0.5 rounded bg-emerald-50 text-emerald-800 font-bold border border-emerald-300">Civic Tech &amp; UI/UX</span>
+            <span class="text-slate-500">January 2026</span>
+          </div>
+          <h3 class="font-display font-bold text-xl text-slate-950">IOFEST Finalist Award</h3>
+          <p class="font-mono text-xs text-slate-500">IOFEST Committee &amp; BINUS University · TITU</p>
+          <div class="aspect-[1.414/1] rounded-lg border-2 border-dashed border-emerald-300 bg-gradient-to-br from-emerald-50/50 via-white to-blue-50/50 p-4 flex flex-col items-center justify-center text-center relative group">
+            <div class="w-10 h-10 rounded-full bg-white border border-emerald-500 flex items-center justify-center shadow-sm text-emerald-700 mb-2">
+              <span class="material-symbols-outlined text-xl">award_star</span>
+            </div>
+            <div class="font-display font-bold text-xs text-slate-800">Certificate Scan Placeholder</div>
+            <p class="font-mono text-[10px] text-slate-400 mt-0.5 max-w-[200px]">Upload / Insert Certificate Image Here<br/><code class="text-cobalt">&lt;img src="..." /&gt;</code></p>
+          </div>
+          <p class="text-xs text-slate-600 leading-relaxed font-body">Finalist honor in Good Governance &amp; Civic Tech category for TITU — transit gamification platform.</p>
+        </div>
+        <div class="pt-3 border-t border-cobalt/20 flex items-center justify-between font-mono text-xs">
+          <span class="text-[10px] text-slate-400 font-bold">IOF-2026-TITU-084</span>
+          <button class="px-3 py-1.5 rounded bg-cobalt text-white font-bold hover:bg-cobalt-hover transition-colors shadow-blueprint-sm" onclick="showCertViewer('IOFEST 2026 Competition Finalist', 'IOFEST Committee &amp; BINUS University', 'IOF-2026-TITU-084', 'Finalist recognition in Civic Tech &amp; Good Governance for TITU — an Apple-glassmorphic transit gamification and carbon-saving platform.', 'January 2026', 'Finalist Credential')">View Doc →</button>
+        </div>
+      </div>
+
+      <!-- CERT 5: Cloud Computing Specialist -->
+      <div class="bg-white rounded-xl border-2 border-cobalt p-6 shadow-blueprint hover:shadow-blueprint-lift transition-all flex flex-col justify-between space-y-4">
+        <div class="space-y-3">
+          <div class="flex items-center justify-between font-mono text-xs">
+            <span class="px-2 py-0.5 rounded bg-purple-50 text-purple-800 font-bold border border-purple-300">Cloud Infrastructure</span>
+            <span class="text-slate-500">August 2025</span>
+          </div>
+          <h3 class="font-display font-bold text-xl text-slate-950">Cloud Computing Specialist</h3>
+          <p class="font-mono text-xs text-slate-500">Cloud Academy &amp; BINUS IS Department</p>
+          <div class="aspect-[1.414/1] rounded-lg border-2 border-dashed border-purple-300 bg-gradient-to-br from-purple-50/50 via-white to-blue-50/50 p-4 flex flex-col items-center justify-center text-center relative group">
+            <div class="w-10 h-10 rounded-full bg-white border border-purple-500 flex items-center justify-center shadow-sm text-purple-700 mb-2">
+              <span class="material-symbols-outlined text-xl">cloud_sync</span>
+            </div>
+            <div class="font-display font-bold text-xs text-slate-800">Certificate Scan Placeholder</div>
+            <p class="font-mono text-[10px] text-slate-400 mt-0.5 max-w-[200px]">Upload / Insert Certificate Image Here<br/><code class="text-cobalt">&lt;img src="..." /&gt;</code></p>
+          </div>
+          <p class="text-xs text-slate-600 leading-relaxed font-body">Certified competence in cloud computing architecture, AWS/GCP essentials, IAM policies, and cloud storage orchestration.</p>
+        </div>
+        <div class="pt-3 border-t border-cobalt/20 flex items-center justify-between font-mono text-xs">
+          <span class="text-[10px] text-slate-400 font-bold">CC-SP-2025-9921</span>
+          <button class="px-3 py-1.5 rounded bg-cobalt text-white font-bold hover:bg-cobalt-hover transition-colors shadow-blueprint-sm" onclick="showCertViewer('Cloud Computing Specialist', 'Cloud Academy &amp; BINUS IS Dept', 'CC-SP-2025-9921', 'Foundational competence in cloud infrastructure architecture, AWS/GCP services, IAM policies, and cloud cost management.', 'August 2025', 'Certified Specialist')">View Doc →</button>
+        </div>
+      </div>
+
+      <!-- CERT 6: ISFEST Participant (new, placeholder details) -->
+      <div class="bg-white rounded-xl border-2 border-dashed border-cobalt/60 p-6 shadow-blueprint hover:shadow-blueprint-lift transition-all flex flex-col justify-between space-y-4">
+        <div class="space-y-3">
+          <div class="flex items-center justify-between font-mono text-xs">
+            <span class="px-2 py-0.5 rounded bg-blue-50 text-blue-700 font-bold border border-blue-300">Participation</span>
+            <span class="text-slate-500">Date TBD</span>
+          </div>
+          <h3 class="font-display font-bold text-xl text-slate-950">ISFEST Participant Certificate</h3>
+          <p class="font-mono text-xs text-slate-500">ISFEST Committee</p>
+          <div class="aspect-[1.414/1] rounded-lg border-2 border-dashed border-blue-300 bg-gradient-to-br from-blue-50/50 via-white to-blue-50/50 p-4 flex flex-col items-center justify-center text-center relative group">
+            <div class="w-10 h-10 rounded-full bg-white border border-blue-500 flex items-center justify-center shadow-sm text-blue-700 mb-2">
+              <span class="material-symbols-outlined text-xl">confirmation_number</span>
+            </div>
+            <div class="font-display font-bold text-xs text-slate-800">Certificate Scan Placeholder</div>
+            <p class="font-mono text-[10px] text-slate-400 mt-0.5 max-w-[200px]">Upload / Insert Certificate Image Here<br/><code class="text-cobalt">&lt;img src="..." /&gt;</code></p>
+          </div>
+          <p class="text-xs text-slate-600 leading-relaxed font-body">[ Placeholder — give Kiro the exact date, your role at ISFEST, and credential ID so this card matches the others. ]</p>
+        </div>
+        <div class="pt-3 border-t border-cobalt/20 flex items-center justify-between font-mono text-xs">
+          <span class="text-[10px] text-slate-400 font-bold">ISFEST-TBD</span>
+          <button class="px-3 py-1.5 rounded bg-cobalt text-white font-bold hover:bg-cobalt-hover transition-colors shadow-blueprint-sm" onclick="showCertViewer('ISFEST Participant Certificate', 'ISFEST Committee', 'ISFEST-TBD', 'Certificate of participation at ISFEST — details pending.', 'Date TBD', 'Participant')">View Doc →</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== SKILLS & LANGUAGES (kept as-is, confirmed fine) ======================== -->
+  <section class="space-y-10 scroll-mt-24" id="skills">
+    <div class="border-b-2 border-cobalt pb-4 flex flex-col md:flex-row md:items-end justify-between gap-4">
+      <div>
+        <div class="font-mono text-xs font-bold text-cobalt uppercase tracking-widest flex items-center gap-2">
+          <span>● SECTION 06</span><span>//</span><span>TOOLBOX &amp; LINGUISTIC STACK</span>
+        </div>
+        <h2 class="font-display font-extrabold text-3xl sm:text-5xl text-slate-950 tracking-tight mt-1">
+          Skills &amp; languages.
+        </h2>
+      </div>
+      <p class="font-mono text-xs sm:text-sm text-slate-600 max-w-md">
+        Technical instruments, collaborative capabilities, and global fluency.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-white rounded-xl border-2 border-cobalt p-6 shadow-blueprint space-y-4">
+        <div class="flex items-center gap-2 border-b-2 border-dashed border-cobalt/30 pb-3">
+          <span class="material-symbols-outlined text-cobalt">terminal</span>
+          <h4 class="font-mono text-xs font-bold text-slate-900 uppercase tracking-wider">HARD SKILLS</h4>
+        </div>
+        <ul class="space-y-2.5 font-mono text-xs sm:text-sm text-slate-800 list-none pl-0">
+          <li class="flex items-center gap-2 p-1.5 rounded bg-cobalt-faint/40 border border-cobalt/15"><span class="w-1.5 h-1.5 rounded-full bg-cobalt"></span><span>Public Speaking</span></li>
+          <li class="flex items-center gap-2 p-1.5 rounded bg-cobalt-faint/40 border border-cobalt/15"><span class="w-1.5 h-1.5 rounded-full bg-cobalt"></span><span>Social Media Marketing (TikTok/Instagram)</span></li>
+          <li class="flex items-center gap-2 p-1.5 rounded bg-cobalt-faint/40 border border-cobalt/15"><span class="w-1.5 h-1.5 rounded-full bg-cobalt"></span><span>Content Design (Canva, CapCut)</span></li>
+          <li class="flex items-center gap-2 p-1.5 rounded bg-cobalt-faint/40 border border-cobalt/15"><span class="w-1.5 h-1.5 rounded-full bg-cobalt"></span><span>Video Editing &amp; Event Documentation</span></li>
+          <li class="flex items-center gap-2 p-1.5 rounded bg-cobalt-faint/40 border border-cobalt/15"><span class="w-1.5 h-1.5 rounded-full bg-cobalt"></span><span>Cloud Computing</span></li>
+          <li class="flex items-center gap-2 p-1.5 rounded bg-cobalt-faint/40 border border-cobalt/15"><span class="w-1.5 h-1.5 rounded-full bg-cobalt"></span><span>MS Office (Excel, Word, PowerPoint)</span></li>
+          <li class="flex items-center gap-2 p-1.5 rounded bg-cobalt-faint/40 border border-cobalt/15"><span class="w-1.5 h-1.5 rounded-full bg-cobalt"></span><span>Basic Data Analysis</span></li>
+        </ul>
+      </div>
+
+      <div class="bg-white rounded-xl border-2 border-cobalt p-6 shadow-blueprint space-y-4">
+        <div class="flex items-center gap-2 border-b-2 border-dashed border-cobalt/30 pb-3">
+          <span class="material-symbols-outlined text-cobalt">psychology</span>
+          <h4 class="font-mono text-xs font-bold text-slate-900 uppercase tracking-wider">SOFT SKILLS</h4>
+        </div>
+        <ul class="space-y-2.5 font-mono text-xs sm:text-sm text-slate-800 list-none pl-0">
+          <li class="flex items-center gap-2 p-1.5 rounded bg-cobalt-faint/40 border border-cobalt/15"><span class="w-1.5 h-1.5 rounded-full bg-cobalt"></span><span>Leadership</span></li>
+          <li class="flex items-center gap-2 p-1.5 rounded bg-cobalt-faint/40 border border-cobalt/15"><span class="w-1.5 h-1.5 rounded-full bg-cobalt"></span><span>Adaptability</span></li>
+          <li class="flex items-center gap-2 p-1.5 rounded bg-cobalt-faint/40 border border-cobalt/15"><span class="w-1.5 h-1.5 rounded-full bg-cobalt"></span><span>Critical Thinking</span></li>
+          <li class="flex items-center gap-2 p-1.5 rounded bg-cobalt-faint/40 border border-cobalt/15"><span class="w-1.5 h-1.5 rounded-full bg-cobalt"></span><span>Time Management</span></li>
+          <li class="flex items-center gap-2 p-1.5 rounded bg-cobalt-faint/40 border border-cobalt/15"><span class="w-1.5 h-1.5 rounded-full bg-cobalt"></span><span>Cross-Cultural Communication</span></li>
+          <li class="flex items-center gap-2 p-1.5 rounded bg-cobalt-faint/40 border border-cobalt/15"><span class="w-1.5 h-1.5 rounded-full bg-cobalt"></span><span>Teamwork</span></li>
+        </ul>
+      </div>
+
+      <div class="bg-white rounded-xl border-2 border-cobalt p-6 shadow-blueprint space-y-4">
+        <div class="flex items-center gap-2 border-b-2 border-dashed border-cobalt/30 pb-3">
+          <span class="material-symbols-outlined text-cobalt">translate</span>
+          <h4 class="font-mono text-xs font-bold text-slate-900 uppercase tracking-wider">LANGUAGES</h4>
+        </div>
+        <ul class="space-y-2.5 font-mono text-xs sm:text-sm text-slate-800 list-none pl-0">
+          <li class="flex items-center justify-between p-2 rounded bg-cobalt-faint/40 border border-cobalt/15"><span class="font-bold text-slate-900">Bahasa Indonesia</span><span class="text-xs px-2 py-0.5 rounded bg-white border border-cobalt/30 text-cobalt font-bold">Native</span></li>
+          <li class="flex items-center justify-between p-2 rounded bg-cobalt-faint/40 border border-cobalt/15"><span class="font-bold text-slate-900">Mandarin</span><span class="text-xs px-2 py-0.5 rounded bg-white border border-cobalt/30 text-cobalt font-bold">Native</span></li>
+          <li class="flex items-center justify-between p-2 rounded bg-cobalt-faint/40 border border-cobalt/15"><span class="font-bold text-slate-900">English</span><span class="text-xs px-2 py-0.5 rounded bg-white border border-cobalt/30 text-cobalt font-bold">Proficient</span></li>
+          <li class="flex items-center justify-between p-2 rounded bg-cobalt-faint/40 border border-cobalt/15"><span class="font-bold text-slate-900">Hokkien</span><span class="text-xs px-2 py-0.5 rounded bg-white border border-cobalt/30 text-cobalt font-bold">Conversational</span></li>
+        </ul>
+        <div class="p-3 bg-paper rounded border border-cobalt/20 font-mono text-[11px] text-slate-600">
+          <span class="text-cobalt font-bold">Note:</span> Multilingual communication honed through international experience in Sydney and bilingual university hosting.
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ======================== FOOTER / LET'S BUILD ======================== -->
+<footer class="bg-slate-950 text-white border-t-4 border-cobalt pt-16 pb-12 relative overflow-hidden" id="contact">
+  <div class="absolute inset-0 bg-[radial-gradient(#1a4ee8_1px,transparent_1px)] [background-size:24px_24px] opacity-15"></div>
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 relative z-10 space-y-12">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      <div class="lg:col-span-7 space-y-4">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded bg-cobalt/20 border border-cobalt text-cobalt font-mono text-xs font-bold uppercase tracking-wider">
+          <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Open for collaborations
+        </div>
+        <h3 class="font-display font-extrabold text-3xl sm:text-5xl text-white tracking-tight leading-tight">
+          Let's build something together.
+        </h3>
+        <p class="text-slate-400 text-sm sm:text-base leading-relaxed max-w-lg font-body">
+          Got a collaboration, a competition idea, or just want to talk shop about cloud, design, or events? My inbox is open.
+        </p>
+      </div>
+
+      <div class="lg:col-span-5 space-y-3">
+        <a class="block bg-slate-900 border-2 border-cobalt rounded-xl p-4 shadow-blueprint hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all group" href="mailto:fangmariel503@gmail.com">
+          <div class="flex items-center justify-between">
+            <div>
+              <div class="font-mono text-[10px] text-slate-400 uppercase font-bold tracking-widest">Email Address</div>
+              <div class="font-mono text-sm sm:text-base font-bold text-white group-hover:text-cobalt-subtle transition-colors">fangmariel503@gmail.com</div>
+            </div>
+            <span class="w-8 h-8 rounded-full bg-cobalt/20 border border-cobalt text-cobalt flex items-center justify-center font-bold text-base">↗</span>
+          </div>
+        </a>
+        <a class="block bg-slate-900 border-2 border-cobalt rounded-xl p-4 shadow-blueprint hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all group" href="tel:+6282128585145">
+          <div class="flex items-center justify-between">
+            <div>
+              <div class="font-mono text-[10px] text-slate-400 uppercase font-bold tracking-widest">Direct Contact</div>
+              <div class="font-mono text-sm sm:text-base font-bold text-white group-hover:text-cobalt-subtle transition-colors">+62 821-2858-5145</div>
+            </div>
+            <span class="w-8 h-8 rounded-full bg-cobalt/20 border border-cobalt text-cobalt flex items-center justify-center font-bold text-base">↗</span>
+          </div>
+        </a>
+        <a class="block bg-slate-900 border-2 border-cobalt rounded-xl p-4 shadow-blueprint hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all group" href="https://www.linkedin.com/in/mariel-fang-a05482319/" rel="noopener" target="_blank">
+          <div class="flex items-center justify-between">
+            <div>
+              <div class="font-mono text-[10px] text-slate-400 uppercase font-bold tracking-widest">Professional Network</div>
+              <div class="font-mono text-sm sm:text-base font-bold text-white group-hover:text-cobalt-subtle transition-colors">LinkedIn Profile</div>
+            </div>
+            <span class="w-8 h-8 rounded-full bg-cobalt/20 border border-cobalt text-cobalt flex items-center justify-center font-bold text-base">↗</span>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-xs text-slate-500">
+      <div>© 2026 Mariel Fang. All rights reserved. Information Systems, BINUS University.</div>
+      <div class="flex items-center gap-4">
+        <a class="hover:text-white transition-colors" href="#about">About</a>
+        <a class="hover:text-white transition-colors" href="#work">Work</a>
+        <a class="hover:text-white transition-colors" href="#certificates">Certificates</a>
+        <a class="text-cobalt font-bold hover:underline" href="#top">Back to top ↑</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ======================== DOCUMENT / CERTIFICATE VIEWER MODAL ======================== -->
+<div class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md overflow-y-auto p-4 sm:p-6" id="certViewerPage" style="display: none;">
+  <div class="max-w-3xl mx-auto my-8">
+    <div class="flex items-center justify-between mb-4">
+      <button class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white border-2 border-cobalt text-slate-900 font-mono text-xs font-bold shadow-blueprint hover:bg-cobalt-faint transition-all" onclick="hideCertViewer()">← Back to Portfolio</button>
+      <div class="flex items-center gap-2">
+        <button class="px-4 py-2 rounded-lg bg-white border border-slate-300 text-slate-800 font-mono text-xs font-bold hover:border-cobalt transition-colors" onclick="window.print()">Print / PDF</button>
+        <button class="w-9 h-9 rounded-lg bg-white border-2 border-cobalt text-cobalt flex items-center justify-center font-mono font-bold text-sm shadow-blueprint hover:bg-rose-50 hover:text-rose-600 transition-colors" onclick="hideCertViewer()">✕</button>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-2xl border-2 border-cobalt shadow-blueprint-lift p-6 sm:p-12 relative overflow-hidden">
+      <div class="absolute inset-0 bg-[radial-gradient(#1a4ee8_1px,transparent_1px)] [background-size:20px_20px] opacity-15 pointer-events-none"></div>
+      <div class="absolute top-6 right-6 seal-circle w-24 h-24 text-[10px] text-cobalt bg-white/95 border-2 border-cobalt shadow-sm rotate-6">OFFICIAL<br/>VERIFIED<br/>★ 2026 ★</div>
+
+      <div class="relative z-10 text-center max-w-xl mx-auto space-y-5">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-400 text-emerald-800 font-mono text-xs font-bold">
+          <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+          <span id="cvBadge">Verified Credential</span>
+        </div>
+        <div class="font-mono text-xs text-slate-400 tracking-widest uppercase font-bold">CERTIFICATE OF RECOGNITION &amp; ACHIEVEMENT</div>
+        <h2 class="font-display font-extrabold text-2xl sm:text-4xl text-slate-950 tracking-tight" id="cvTitle">SIS Excellence Award</h2>
+        <p class="text-xs sm:text-sm text-slate-500 font-mono">This official credential proudly certifies that</p>
+        <h3 class="font-display font-extrabold text-3xl sm:text-4xl text-cobalt underline decoration-cobalt/30 underline-offset-8">Mariel Fang</h3>
+        <p class="text-sm sm:text-base text-slate-700 leading-relaxed font-body" id="cvDesc">For demonstrated outstanding performance, dedication, and impactful contribution.</p>
+      </div>
+
+      <div class="mt-8 pt-6 border-t-2 border-dashed border-cobalt/30 grid grid-cols-1 sm:grid-cols-3 gap-4 font-mono text-xs relative z-10">
+        <div class="p-3 rounded bg-cobalt-faint/50 border border-cobalt/20">
+          <div class="text-[10px] text-slate-400 uppercase font-bold">Issuing Organization</div>
+          <div class="font-bold text-slate-900 mt-0.5" id="cvIssuer">BINUS University</div>
+        </div>
+        <div class="p-3 rounded bg-cobalt-faint/50 border border-cobalt/20">
+          <div class="text-[10px] text-slate-400 uppercase font-bold">Date Issued</div>
+          <div class="font-bold text-slate-900 mt-0.5" id="cvDate">March 2025</div>
+        </div>
+        <div class="p-3 rounded bg-cobalt-faint/50 border border-cobalt/20">
+          <div class="text-[10px] text-slate-400 uppercase font-bold">Credential ID</div>
+          <div class="font-bold text-cobalt mt-0.5" id="cvId">BINUS-SIS-EXC-2025-0042</div>
+        </div>
+      </div>
+
+      <div class="mt-6 pt-4 border-t border-slate-200 flex flex-wrap items-center justify-between gap-4 font-mono text-xs text-slate-500 relative z-10">
+        <div class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-emerald-500"></span> Verified on BINUS academic portfolio ledger.</div>
+        <button class="px-4 py-2 rounded bg-cobalt text-white font-bold hover:bg-cobalt-hover transition-colors shadow-blueprint-sm" onclick="hideCertViewer()">Close Window</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- JS logic lives in its own file now instead of an inline <script> -->
+<script src="js/main.js"></script>
+</body>
+</html>
