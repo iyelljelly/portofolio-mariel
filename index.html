@@ -114,18 +114,12 @@
             <span class="bg-cobalt-faint px-2 py-0.5 rounded border border-cobalt/30 text-cobalt font-bold">2026 ACTIVE</span>
           </div>
 
-          <!-- MAIN PHOTO SLOT — swap this div's contents for <img src="assets/img/mariel-hero.jpg" ...> -->
-          <div class="mt-4 aspect-[4/5] rounded-xl border-2 border-cobalt bg-gradient-to-br from-cobalt-faint via-white to-blue-50/70 flex flex-col items-center justify-center text-center relative group overflow-hidden">
-            <div class="absolute inset-0 bg-[radial-gradient(#1a4ee8_1px,transparent_1px)] [background-size:16px_16px] opacity-25"></div>
-            <div class="absolute top-3 right-3 rotate-12 seal-circle w-20 h-20 text-[9px] text-cobalt bg-white/90 shadow-sm border-2 border-cobalt">
+          <!-- MAIN PHOTO — pulled from assets/img/mariel-hero.jpg -->
+          <div class="mt-4 aspect-[4/5] rounded-xl border-2 border-cobalt relative group overflow-hidden">
+            <img alt="Mariel Fang" class="absolute inset-0 w-full h-full object-cover" src="assets/img/mariel-hero.jpg"/>
+            <div class="absolute top-3 right-3 rotate-12 seal-circle w-20 h-20 text-[9px] text-cobalt bg-white/90 shadow-sm border-2 border-cobalt z-10">
               <span>★ VERIFIED ★<br/>BINUS IS<br/>TALENT</span>
             </div>
-            <div class="relative z-10 w-24 h-24 rounded-full bg-white border-2 border-cobalt flex items-center justify-center shadow-blueprint-sm mb-3">
-              <span class="material-symbols-outlined text-4xl text-cobalt">person</span>
-            </div>
-            <p class="relative z-10 font-mono text-[11px] text-slate-500 max-w-[220px] mt-1">
-              [ Drop your favorite photo here — swap this placeholder for your real hero shot ]
-            </p>
           </div>
 
           <div class="mt-4 pt-3 border-t-2 border-dashed border-cobalt/30 text-center">
@@ -160,7 +154,6 @@
           </a>
 
           <!-- Download CV tile -->
-          <!-- TODO: point this at your real CV file, e.g. assets/cv/Mariel-Fang-CV.pdf -->
           <a class="col-span-2 bg-cobalt text-white rounded-xl p-4 shadow-blueprint hover:shadow-blueprint-lift transition-all flex flex-col items-center justify-center gap-1" href="assets/cv/Mariel-Fang-CV.pdf" download>
             <span class="material-symbols-outlined text-xl">download</span>
             <span class="font-mono text-[10px] font-bold uppercase tracking-wide">Download CV</span>
@@ -299,51 +292,32 @@
       <div class="font-mono text-xs font-bold text-cobalt uppercase tracking-widest flex items-center gap-2">
         <span class="w-2 h-2 rounded-full bg-rose-500"></span> Business Case Competition
       </div>
-      <p class="font-mono text-[11px] text-slate-400">Click a card to flip it and preview the case — click again (or hit Back) to flip it back.</p>
       <div class="grid grid-cols-1 md:grid-cols-12 gap-5">
-        <!-- Beyond the Gear — flip card -->
-        <div class="md:col-span-12 flip-card project-tile-link relative min-h-[240px]" onclick="toggleFlip(this)">
-          <div class="flip-card-inner">
-            <!-- FRONT -->
-            <div class="flip-card-front bg-white rounded-xl border-2 border-cobalt p-6 sm:p-7 shadow-blueprint hover:shadow-blueprint-lift transition-all justify-between">
-              <div class="space-y-3">
-                <div class="flex items-center justify-between flex-wrap gap-2">
-                  <span class="font-mono text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded bg-rose-50 text-rose-700 border border-rose-300">
-                    ● Business Case · PROGRESSIO
-                  </span>
-                  <span class="font-mono text-xs font-bold text-cobalt bg-cobalt-faint px-2 py-0.5 rounded border border-cobalt/20">
-                    SEMIFINALIST
-                  </span>
-                </div>
-                <h3 class="font-display font-bold text-2xl sm:text-3xl text-slate-950">
-                  Beyond the Gear
-                </h3>
-                <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
-                  My first-ever competition — an IP-collaboration growth strategy for outdoor brand Torch, aimed squarely at Gen Z. Nervous debut, semifinalist result, team FIRSTIMERZ.
-                </p>
-              </div>
-              <div class="pt-6 mt-6 border-t border-cobalt/20 flex items-center justify-between">
-                <div class="flex gap-2 font-mono text-[11px] text-slate-500">
-                  <span class="bg-slate-100 px-2 py-0.5 rounded">#Strategy</span>
-                  <span class="bg-slate-100 px-2 py-0.5 rounded">#GenZResearch</span>
-                </div>
-                <span class="font-mono text-[11px] text-cobalt font-bold">Click to flip ↻</span>
-              </div>
+        <div class="md:col-span-12 project-tile-link bg-white rounded-xl border-2 border-cobalt p-6 sm:p-7 shadow-blueprint hover:shadow-blueprint-lift transition-all relative group flex flex-col justify-between" onclick="goToProjectDetail('progressio')">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between flex-wrap gap-2">
+              <span class="font-mono text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded bg-rose-50 text-rose-700 border border-rose-300">
+                ● Business Case · PROGRESSIO
+              </span>
+              <span class="font-mono text-xs font-bold text-cobalt bg-cobalt-faint px-2 py-0.5 rounded border border-cobalt/20">
+                SEMIFINALIST
+              </span>
             </div>
-            <!-- BACK -->
-            <div class="flip-card-back bg-white rounded-xl border-2 border-cobalt p-6 sm:p-7 shadow-blueprint justify-between">
-              <div class="space-y-2">
-                <span class="font-mono text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded bg-rose-50 text-rose-700 border border-rose-300 inline-block">● The gist</span>
-                <h4 class="font-display font-bold text-lg sm:text-xl text-slate-950">Beyond the Gear</h4>
-                <p class="text-slate-600 text-sm leading-relaxed">
-                  We pitched turning Torch's gear into identity-driven pieces through high-affinity IP collaborations with Gen Z. Research-led case, A.I.R. brand strategy, semifinalist result with team FIRSTIMERZ.
-                </p>
-              </div>
-              <div class="pt-4 mt-4 border-t border-cobalt/20 flex items-center justify-between">
-                <a class="font-mono text-xs font-bold text-cobalt hover:underline" href="javascript:void(0)" onclick="event.stopPropagation(); goToProjectDetail('progressio')">Read full case study ↓</a>
-                <button class="flip-back-btn font-mono text-xs font-bold text-slate-500 hover:text-cobalt inline-flex items-center gap-1" onclick="event.stopPropagation(); toggleFlip(this.closest('.flip-card'))">← Back</button>
-              </div>
+            <h3 class="font-display font-bold text-2xl sm:text-3xl text-slate-950 group-hover:text-cobalt transition-colors">
+              Beyond the Gear
+            </h3>
+            <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+              My first-ever competition — an IP-collaboration growth strategy for outdoor brand Torch, aimed squarely at Gen Z. Nervous debut, semifinalist result, team FIRSTIMERZ.
+            </p>
+          </div>
+          <div class="pt-6 mt-6 border-t border-cobalt/20 flex items-center justify-between">
+            <div class="flex gap-2 font-mono text-[11px] text-slate-500">
+              <span class="bg-slate-100 px-2 py-0.5 rounded">#Strategy</span>
+              <span class="bg-slate-100 px-2 py-0.5 rounded">#GenZResearch</span>
             </div>
+            <span class="font-mono text-xs font-bold text-cobalt inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+              View case details →
+            </span>
           </div>
         </div>
       </div>
@@ -356,122 +330,65 @@
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
 
-        <!-- TITU — flip card -->
-        <div class="flip-card project-tile-link relative min-h-[320px]" onclick="toggleFlip(this)">
-          <div class="flip-card-inner">
-            <!-- FRONT -->
-            <div class="flip-card-front bg-white rounded-xl border-2 border-cobalt p-6 shadow-blueprint hover:shadow-blueprint-lift transition-all justify-between">
-              <div class="space-y-3">
-                <div class="flex items-center justify-between flex-wrap gap-2">
-                  <span class="font-mono text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded bg-emerald-50 text-emerald-700 border border-emerald-300">
-                    ● I/O FESTIVAL 2026
-                  </span>
-                  <span class="font-mono text-xs font-bold text-cobalt bg-cobalt-faint px-2 py-0.5 rounded border border-cobalt/20">
-                    PARTICIPANT
-                  </span>
-                </div>
-                <h3 class="font-display font-bold text-xl sm:text-2xl text-slate-950">
-                  TITU
-                </h3>
-                <p class="text-slate-600 text-sm leading-relaxed">
-                  A Jakarta transit app that turns your commute into city-building. CO₂ savings become in-game currency, wrapped in Apple-inspired glassmorphism.
-                </p>
-              </div>
-              <div class="pt-5 mt-5 border-t border-cobalt/20 flex items-center justify-between">
-                <span class="bg-slate-100 px-2 py-0.5 rounded font-mono text-[11px] text-slate-500">#CivicTech</span>
-                <span class="font-mono text-[11px] text-cobalt font-bold">Flip ↻</span>
-              </div>
+        <!-- TITU -->
+        <div class="project-tile-link bg-white rounded-xl border-2 border-cobalt p-6 shadow-blueprint hover:shadow-blueprint-lift transition-all relative group flex flex-col justify-between" onclick="goToProjectDetail('titu')">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between flex-wrap gap-2">
+              <span class="font-mono text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded bg-emerald-50 text-emerald-700 border border-emerald-300">
+                ● I/O FESTIVAL 2026
+              </span>
+              <span class="font-mono text-xs font-bold text-cobalt bg-cobalt-faint px-2 py-0.5 rounded border border-cobalt/20">
+                PARTICIPANT
+              </span>
             </div>
-            <!-- BACK -->
-            <div class="flip-card-back bg-white rounded-xl border-2 border-cobalt p-6 shadow-blueprint justify-between">
-              <div class="space-y-2">
-                <span class="font-mono text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded bg-emerald-50 text-emerald-700 border border-emerald-300 inline-block">● The gist</span>
-                <h4 class="font-display font-bold text-lg text-slate-950">TITU</h4>
-                <p class="text-slate-600 text-sm leading-relaxed">
-                  Every TransJakarta ride feeds real CO₂ savings into a city-building game. Built with two classmates, Apple-inspired glassmorphism UI, custom pixel-art city assets.
-                </p>
-              </div>
-              <div class="pt-4 mt-4 border-t border-cobalt/20 flex items-center justify-between">
-                <a class="font-mono text-xs font-bold text-cobalt hover:underline" href="javascript:void(0)" onclick="event.stopPropagation(); goToProjectDetail('titu')">Full case study ↓</a>
-                <button class="flip-back-btn font-mono text-xs font-bold text-slate-500 hover:text-cobalt inline-flex items-center gap-1" onclick="event.stopPropagation(); toggleFlip(this.closest('.flip-card'))">← Back</button>
-              </div>
-            </div>
+            <h3 class="font-display font-bold text-xl sm:text-2xl text-slate-950 group-hover:text-cobalt transition-colors">
+              TITU
+            </h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              A Jakarta transit app that turns your commute into city-building. CO₂ savings become in-game currency, wrapped in Apple-inspired glassmorphism.
+            </p>
+          </div>
+          <div class="pt-5 mt-5 border-t border-cobalt/20 flex items-center justify-between">
+            <span class="bg-slate-100 px-2 py-0.5 rounded font-mono text-[11px] text-slate-500">#CivicTech</span>
+            <span class="font-mono text-xs font-bold text-cobalt inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">View →</span>
           </div>
         </div>
 
-        <!-- Un-Loop — flip card -->
-        <div class="flip-card project-tile-link relative min-h-[320px]" onclick="toggleFlip(this)">
-          <div class="flip-card-inner">
-            <!-- FRONT -->
-            <div class="flip-card-front bg-white rounded-xl border-2 border-cobalt p-6 shadow-blueprint hover:shadow-blueprint-lift transition-all justify-between">
-              <div class="space-y-3">
-                <span class="font-mono text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded bg-purple-50 text-purple-700 border border-purple-300">
-                  ● Product Design
-                </span>
-                <h3 class="font-display font-bold text-xl sm:text-2xl text-slate-950">
-                  Un-Loop
-                </h3>
-                <p class="text-slate-600 text-sm leading-relaxed">
-                  A gamified parental-control app that fights doomscrolling without turning into a nagging app. 18+ screens, two very different users, one Figma file.
-                </p>
-              </div>
-              <div class="pt-5 mt-5 border-t border-cobalt/20 flex items-center justify-between">
-                <span class="bg-slate-100 px-2 py-0.5 rounded font-mono text-[11px] text-slate-500">#ProductDesign</span>
-                <span class="font-mono text-[11px] text-cobalt font-bold">Flip ↻</span>
-              </div>
-            </div>
-            <!-- BACK -->
-            <div class="flip-card-back bg-white rounded-xl border-2 border-cobalt p-6 shadow-blueprint justify-between">
-              <div class="space-y-2">
-                <span class="font-mono text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded bg-purple-50 text-purple-700 border border-purple-300 inline-block">● The gist</span>
-                <h4 class="font-display font-bold text-lg text-slate-950">Un-Loop</h4>
-                <p class="text-slate-600 text-sm leading-relaxed">
-                  Fights teen doomscrolling by turning healthier screen habits into a game both kids and parents want to play. 20-slide pitch deck, 18+ screen Figma prototype.
-                </p>
-              </div>
-              <div class="pt-4 mt-4 border-t border-cobalt/20 flex items-center justify-between">
-                <a class="font-mono text-xs font-bold text-cobalt hover:underline" href="javascript:void(0)" onclick="event.stopPropagation(); goToProjectDetail('unloop')">Full case study ↓</a>
-                <button class="flip-back-btn font-mono text-xs font-bold text-slate-500 hover:text-cobalt inline-flex items-center gap-1" onclick="event.stopPropagation(); toggleFlip(this.closest('.flip-card'))">← Back</button>
-              </div>
-            </div>
+        <!-- Un-Loop -->
+        <div class="project-tile-link bg-white rounded-xl border-2 border-cobalt p-6 shadow-blueprint hover:shadow-blueprint-lift transition-all relative group flex flex-col justify-between" onclick="goToProjectDetail('unloop')">
+          <div class="space-y-3">
+            <span class="font-mono text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded bg-purple-50 text-purple-700 border border-purple-300">
+              ● Product Design
+            </span>
+            <h3 class="font-display font-bold text-xl sm:text-2xl text-slate-950 group-hover:text-cobalt transition-colors">
+              Un-Loop
+            </h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              A gamified parental-control app that fights doomscrolling without turning into a nagging app. 18+ screens, two very different users, one Figma file.
+            </p>
+          </div>
+          <div class="pt-5 mt-5 border-t border-cobalt/20 flex items-center justify-between">
+            <span class="bg-slate-100 px-2 py-0.5 rounded font-mono text-[11px] text-slate-500">#ProductDesign</span>
+            <span class="font-mono text-xs font-bold text-cobalt inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">View →</span>
           </div>
         </div>
 
-        <!-- Wise — flip card -->
-        <div class="flip-card project-tile-link relative min-h-[320px]" onclick="toggleFlip(this)">
-          <div class="flip-card-inner">
-            <!-- FRONT -->
-            <div class="flip-card-front bg-white rounded-xl border-2 border-cobalt p-6 shadow-blueprint hover:shadow-blueprint-lift transition-all justify-between">
-              <div class="space-y-3">
-                <span class="font-mono text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded bg-blue-50 text-blue-700 border border-blue-300">
-                  ● ISFEST
-                </span>
-                <h3 class="font-display font-bold text-xl sm:text-2xl text-slate-950">
-                  Wise
-                </h3>
-                <p class="text-slate-600 text-sm leading-relaxed">
-                  A behavioral-finance app concept for ISFEST's "Psychology of Money" theme — because most people don't fail at budgeting from bad math, they fail from bad feelings.
-                </p>
-              </div>
-              <div class="pt-5 mt-5 border-t border-cobalt/20 flex items-center justify-between">
-                <span class="bg-slate-100 px-2 py-0.5 rounded font-mono text-[11px] text-slate-500">#BehavioralFinance</span>
-                <span class="font-mono text-[11px] text-cobalt font-bold">Flip ↻</span>
-              </div>
-            </div>
-            <!-- BACK -->
-            <div class="flip-card-back bg-white rounded-xl border-2 border-cobalt p-6 shadow-blueprint justify-between">
-              <div class="space-y-2">
-                <span class="font-mono text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded bg-blue-50 text-blue-700 border border-blue-300 inline-block">● The gist</span>
-                <h4 class="font-display font-bold text-lg text-slate-950">Wise</h4>
-                <p class="text-slate-600 text-sm leading-relaxed">
-                  Emotion-based tracking, mindset-building, and smart budgeting — designed to feel like a judgment-free coach for your money habits, not another expense tracker.
-                </p>
-              </div>
-              <div class="pt-4 mt-4 border-t border-cobalt/20 flex items-center justify-between">
-                <a class="font-mono text-xs font-bold text-cobalt hover:underline" href="javascript:void(0)" onclick="event.stopPropagation(); goToProjectDetail('wise')">Full case study ↓</a>
-                <button class="flip-back-btn font-mono text-xs font-bold text-slate-500 hover:text-cobalt inline-flex items-center gap-1" onclick="event.stopPropagation(); toggleFlip(this.closest('.flip-card'))">← Back</button>
-              </div>
-            </div>
+        <!-- Wise -->
+        <div class="project-tile-link bg-white rounded-xl border-2 border-cobalt p-6 shadow-blueprint hover:shadow-blueprint-lift transition-all relative group flex flex-col justify-between" onclick="goToProjectDetail('wise')">
+          <div class="space-y-3">
+            <span class="font-mono text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded bg-blue-50 text-blue-700 border border-blue-300">
+              ● ISFEST
+            </span>
+            <h3 class="font-display font-bold text-xl sm:text-2xl text-slate-950 group-hover:text-cobalt transition-colors">
+              Wise
+            </h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              A behavioral-finance app concept for ISFEST's "Psychology of Money" theme — because most people don't fail at budgeting from bad math, they fail from bad feelings.
+            </p>
+          </div>
+          <div class="pt-5 mt-5 border-t border-cobalt/20 flex items-center justify-between">
+            <span class="bg-slate-100 px-2 py-0.5 rounded font-mono text-[11px] text-slate-500">#BehavioralFinance</span>
+            <span class="font-mono text-xs font-bold text-cobalt inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">View →</span>
           </div>
         </div>
       </div>

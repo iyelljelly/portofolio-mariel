@@ -29,17 +29,6 @@ window.addEventListener('keydown', function (e) {
   if (e.key === 'Escape') hideCertViewer();
 });
 
-// ---- Flip cards in "Explore the Work" ---------------------------------
-// Click anywhere on a flip-card to rotate it and reveal the back face;
-// click again (anywhere on the card, or the explicit "Back" button) to
-// rotate it back to the front. Links/buttons inside the back face call
-// event.stopPropagation() in their own onclick so they don't also trigger
-// a flip when the visitor meant to follow the link instead.
-function toggleFlip(cardEl) {
-  if (!cardEl || !cardEl.classList) return;
-  cardEl.classList.toggle('is-flipped');
-}
-
 // ---- Jump straight to a project's detail block from a work tile -------
 function goToProjectDetail(anchorId) {
   var el = document.getElementById(anchorId);

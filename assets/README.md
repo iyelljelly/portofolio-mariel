@@ -81,20 +81,21 @@ detail section with your real screenshots.
 
 ---
 
-## Tutorial 5 — Add your custom cursor images (the "flip card" cursors)
+## Tutorial 5 — Add your custom cursor images
 
-**Goal:** make the mouse cursor change into your own custom image —
-one image while hovering a project card, a different image while
-hovering the "← Back" button on a flipped card.
+**Goal:** make the mouse cursor change into your own custom image across
+the **entire site**, from the top of the homepage all the way down to the
+footer — plus a slightly different cursor when hovering a project card
+in "Explore the Work".
 
 **Steps:**
-1. On GitHub, go into `assets`, then click **Add file → New folder**,
-   and name the new folder `cursors`. (If this folder already exists
-   because Kiro created it, just open it instead.)
-2. Inside `assets/cursors/`, click **Add file → Upload files**.
+1. On GitHub, go into `assets`, then open the `cursors` folder (Kiro
+   already created it for you).
+2. Click **Add file → Upload files**.
 3. Upload your two cursor images with these **exact filenames**:
-   - `view-cursor.png` — shown while hovering a project card
-   - `back-cursor.png` — shown while hovering the "← Back" button
+   - `view-cursor.png` — the default cursor, used everywhere on the site
+   - `back-cursor.png` — shown as an accent while hovering a project card
+     in "Explore the Work"
 4. Tips for the images themselves:
    - PNG format, with a transparent background, works best.
    - Keep them small — around 32×32 to 64×64 pixels. A huge image file
